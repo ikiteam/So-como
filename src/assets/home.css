@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;700&display=swap');
+
+
+body {
+    background: #10201F;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------navbar -----------*/
+
+.navbar ul {
+    display: flex;
+    float: right;
+    padding: 0;
+    margin: 59px 61px 0 0;
+}
+
+.linkNav {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.linkNav > a {
+    color: white;
+    text-decoration: none;
+}
+
+/* --------------logo -----------*/
+
+.cls-1 {
+    fill: white;
+}
+.logo::before {
+    content:"";
+    position: absolute;
+    width: 1863px;
+    height: 792px;
+    left: -830px;
+    top: -336px;
+    z-index: -1;
+    background: #35AD64;
+    filter: blur(500px);
+}
+
+.logosvg {
+    position: absolute;
+    width: 195px;
+    height: 195px;
+    left: 296px;
+    top: 186px;
+}
+
+.logo p:first-child {
+    position: absolute;
+    width: 411px;
+    height: 90px;
+    left: 189px;
+    top: 553px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: white;
+}
+
+.info {
+    position: absolute;
+    top: 882px;
+    width: 100%;
+    background: white;
+}
+
+.info::after {
+    content:"";
+    position: absolute;
+    width: 1510px;
+    height: 1185px;
+    background: white;
+}
+
+.infoSocomo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.infoSocomo div {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video {
+    position: absolute;
+
+    left: 185px;
+    top: 1541px;
+}
+
