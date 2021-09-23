@@ -4,9 +4,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $font-text;
+    color:$secondary;
 }
 body {
     background: #10201F;
+    overflow-X:hidden;
 }
 
 /*------------------------HEADER-----------------------*/
@@ -34,17 +36,18 @@ header{
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    color: $blanc;
+
     .logo-container{
         align-self: center;
         p{
             margin-bottom:25px;
             font-size: 1.75em;
-    &:last-of-type{
-        font-size: 1em;
-        font-weight:200;
-        font-style: italic;
-    }
+            color: $blanc;
+            &:last-of-type{
+                font-size: 1em;
+                font-weight:200;
+                font-style: italic;
+            }
         }
         .logo{
             margin-bottom: 80px;
@@ -56,7 +59,29 @@ header{
                 font-family: $font-title;
                 font-size: 9em;
                 font-weight: 500;
+                color: $blanc;
             }
+        }
+
+    }
+    .phone{
+        max-width: 40%;
+        display: block;
+        position: relative;
+        z-index: 10;
+        img{
+            width: 100%;
+
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 110%;
+            height:auto;
+            top:0;
+            right:0;
+            background: url("./img/telephone.png");
+
         }
     }
 }
@@ -106,7 +131,7 @@ header{
         background: $blanc;
         z-index: -1;
         transform: translateX(-50%);
-
+        clip-path: ellipse(160% 50% at 50% 50%);
     }
     position: relative;
     max-width: $width-max;
@@ -148,7 +173,7 @@ header{
         position: relative;
         z-index: 10 ;
         text-align: center;
-        &::before{
+       /* &::before{
             content:"";
             position: absolute;
             bottom:-100px;
@@ -160,20 +185,19 @@ header{
             border-bottom : 500px solid $secondary;
             border-left : 100vw solid transparent;
             z-index: -1;
-        }
+        }*/
     }
     .arrive_bientot{
         &::before{
             content:"";
             position: absolute;
-            bottom:-500px;
+            top:-100%;
             left: 50%;
-            transform: translateX(-50%);
             display : inline-block;
-            height : 0;
-            width : 0;
-            border-top : 500px solid $secondary;
-            border-right : 100vw solid transparent;
+            height : 300%;
+            width : 200vw;
+            background: $secondary;
+            transform:translateX(-50%) skewY( -7.5deg);
             z-index: -1;
         }
         position: relative;
@@ -186,15 +210,89 @@ header{
             font-size: 3.5em;
             font-family: $font-title;
             color:$blanc;
+            margin-bottom: 50px;
         }
         .logo_download{
             display: flex;
             flex-flow: row;
             justify-content: center;
             img{
-                width: 200px;
+                width: 300px;
                 margin:0 30px;
             }
         }
     }
+
+    .contact{
+        margin-top: 550px;
+        .contact-container{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .contact-form{
+            width: 40%;
+            form{
+                width: 100%;
+                div{
+                    margin-bottom: 25px;
+                    label{
+                        display: block;
+                        margin-bottom:10px;
+                        font-weight: 700;
+
+                    }
+                    input,
+                    textarea{
+                        width: 100%;
+                        resize:none;
+                        padding:15px;
+                        border-radius: 5px;
+                        outline: none;
+                        border: 1px solid $primary;
+                    }
+                }
+                .btn.submit{
+                    display: block;
+                    margin-top: 25px;
+                    padding: 25px 50px;
+                    border-radius: 5px;
+                    width: fit-content;
+                    background: $primary;
+                    font-family: $font-title;
+                    color:$blanc;
+                    text-decoration: none;
+                }
+
+            }
+        }
+
+    }
+}
+
+/*--------------------FOOTER--------------------------*/
+
+footer{
+    width: $width-max;
+    margin:auto;
+    margin-top: 150px;
+
+        .logo{
+            text-align: center;
+            margin-bottom: 80px;
+            width: 350px;
+            #Socomo_logo{
+                fill:$blanc;
+                width: 50%;
+            }
+            h3{
+                font-family: $font-title;
+                font-size: 4em;
+                font-weight: 500;
+                color: $blanc;
+            }
+        }
+
+
 }

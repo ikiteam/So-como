@@ -5,6 +5,7 @@ import Logo from "../../components/Logo";
 import Phone from "../../assets/img/telephone.png"
 import Google from "../../assets/img/google-play.png"
 import Apple from "../../assets/img/apple-store.png"
+import ContactForm from "../../components/ContactForm";
 const Home = () => {
     return (
         <div className="Home">
@@ -19,7 +20,10 @@ const Home = () => {
                     <p>L'appli pour des bons plans près de chez vous !</p>
                     <p>(bientôt disponible en téléchargement)</p>
                 </div>
-                <img src={ Phone } alt="" className="phone"/>
+                <div className="phone">
+                    <img src={ Phone } alt=""/>
+                </div>
+
             </header>
             <div className="container">
                 <div className="info">
@@ -115,8 +119,25 @@ const Home = () => {
                         <img src={Apple} alt=""/>
                     </div>
                 </div>
-            </div>
+                <div className="contact">
+                    <h2>Contactez-nous</h2>
+                    <div className="contact-container">
+                        <div className="contact-RS">
+                            <p>Pour plus d'informations sur l'application</p>
+                        </div>
+                        <div className="contact-form">
+                            <ContactForm/>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div className="logo">
+                    <Logo/>
+                    <h3>Socomo</h3>
+                </div>
+            </footer>
         </div>
     )
 }
