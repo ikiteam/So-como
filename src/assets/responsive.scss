@@ -3,6 +3,7 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: $width-576) { 
     header{
+
         .logo-container{  
             .logo{
                 #Socomo_logo{
@@ -18,7 +19,11 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: $width-768) { 
+  
     header{
+        &::before{
+            filter: blur(250px);
+        }
         .logo-container{  
             .logo{
                 #Socomo_logo{
@@ -236,12 +241,14 @@
             width: 45%;
         }
         .phone{
-            width: 45%;
+            //width: 40%;
             display: block;
             z-index: 10;
             img{
-                width: 80%;
-                margin-top:50%;
+                height: calc(100vh - 160px + 50px);
+                //width: 80%;
+                margin-top:360px;
+                margin-right:25px;
             }
         }
 

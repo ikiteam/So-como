@@ -33,12 +33,12 @@ header{
     &::before{
         content:"";
         position: absolute;
-        width:106%;
+        width:116%;
         height: 60%;
         left: -40%;
         top: -25%;
         background: $primary;
-        filter: blur(300px);
+        filter: blur(100px);
         //box-shadow: 00px 300px 300px $primary;
         border-radius: 50%;
         z-index: -1;
