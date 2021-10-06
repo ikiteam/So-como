@@ -9,34 +9,36 @@
 }
 
 html{
-  // width: 100vw;
-   overflow-x: hidden;
+    width: 100vw;
+    overflow-x: hidden;
 }
 body {
     background: #10201F;
-    width: 100vw;
     overflow-x: hidden;
+    width: 100vw;
 }
 
 /*------------------------HEADER-----------------------*/
 
 header{
+    
     height: 100vh;
     width: 100%;
     margin: auto;
-    padding: 0 10%;
+    padding: 200px 20% 0 20%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     text-align: center;
     position: relative;
+    overflow-x: hidden;
     &::before{
         content:"";
         position: absolute;
-        width:106%;
-        height: 60%;
-        left: -40%;
-        top: -25%;
+        width: 1863px;
+        height: 792px;
+        left: -630px;
+        top: -236px;
         background: $primary;
         filter: blur(300px);
         //box-shadow: 00px 300px 300px $primary;
@@ -44,9 +46,10 @@ header{
         z-index: -1;
     }
     .logo-container{
+        align-self: center;
         p{
             margin-bottom:25px;
-            font-size: 1.40em;
+            font-size: 1.75em;
             color: $blanc;
             &:last-of-type{
                 font-size: 1em;
@@ -58,36 +61,49 @@ header{
             margin-bottom: 80px;
             #Socomo_logo{
                 fill:$blanc;
-                width: 125px;
+                width: 50%;
             }
             h1{
                 font-family: $font-title;
-                font-size: 3.5em;
+                font-size: 9em;
                 font-weight: 500;
                 color: $blanc;
             }
         }
 
     }
-
     .phone{
-        display:none;
+        max-width: 40%;
+        display: block;
+        position: relative;
+        z-index: 10;
+        img{
+            width: 100%;
+
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 110%;
+            height:auto;
+            top:0;
+            right:0;
+            background: url("./img/telephone2.png");
+
+        }
     }
-  
 }
 
 /*------------------------NAV---------------------------*/
+
 .navbar {
-    /*position: absolute;
+    position: absolute;
     width: 100%;
     height: 200px;
-    padding:0 80px;*/
-   //width: 100%;   
- 
+    padding:0 80px;
     &.open{
-       
         .icone{
-            mix-blend-mode: normal;
+          
             div{
                
                 &::before,&::after{
@@ -108,7 +124,6 @@ header{
             }
         }
         ul {
-            visibility: visible;
             &::before {
                 transform: scale(2000, 2000);
                 transition: transform 0.5s ease-in-out;
@@ -133,17 +148,14 @@ header{
     }
     .icone{
         position: fixed;
-        top:20px;
-        right:20px;
+        top:80px;
+        right:80px;
         width: 30px;
         height: 30px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        mix-blend-mode: difference;
+        display:none;
         z-index: 1000;
             div{
                 height: 3px;
@@ -174,246 +186,202 @@ header{
 
     }
     ul{
-       
-        &::before{
-            content: "";
-            position: absolute;
-            top: 35px;
-            right: 35px;
-            transform-origin: center center;
-            background: $blanc;
-            border-radius: 50%;
-            width: 1px;
-            height: 1px;
-            transition: transform 0.5s 450ms ease-in-out;
-            z-index: -1;
-        }
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top:0;
-        right: 0;
-        width: 100%;
         height: 100%;
-        visibility: hidden;
-        z-index: 100;
-        transition: all 1000ms ease;
-
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        list-style-type: none;
         li{
-            padding: 0;
-            margin-bottom:80px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateX(30px);
-            transition: all 250ms ease-in-out;
-            list-style-type: none;
-            &:last-child{
-                margin-bottom: 0;
+            padding-right:80px;
+            &:last-of-type{
+                padding-right:0px ;
             }
-            &:nth-child(1){
-                transition-delay: 100ms;
-            }
-            &:nth-child(2){
-                transition-delay: 50ms;
-            }
-            &:nth-child(3){
-                transition-delay: 0ms;
-            }
-
             a{
-                color: $secondary;
-                font-weight: 500;
-                font-size: 2em;
-                text-transform: unset;
-                letter-spacing: 0;
                 text-decoration: none;
-
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color:$blanc;
+                font-weight: 200;
             }
         }
-
     }
-
 
 
 }
 
-
 /*--------------------CONTAINER--------------------------*/
 
 .container{
-   width: 100%;
-   background: $blanc;
-   padding : 10%;
+    &::before{
+        content: "";
+        width: 100vw;
+        height: 100%;
+        top:80px;
+        left: 50%;
+        position: absolute;
+        background: $blanc;
+        z-index: -1;
+        transform: translateX(-50%);
+        clip-path: ellipse(160% 50% at 50% 50%);
+    }
     position: relative;
-   h2{
-       font-family: $font-title;
-       font-weight: 500;
-       color:$primary;
-       font-size: 2em;
-       text-align: center;
-       margin-bottom:50px;
-       
-   }
+    width: $width-max;
+    margin: auto;
+    background: $blanc;
+    padding: 80px;
+    h2{
+        font-family: $font-title;
+        color:$primary;
+        font-size: 2.5em;
+        font-weight: normal;
+        margin-bottom:100px;
 
-   .info{
-        margin-bottom: 80px;
+    }
+    .infoSocomo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         text-align: center;
-        .infoSocomo{
-            div{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 50px;
-                text-align: left;
-                .iconeSvg{
-                    display: block;
-                    margin-right: 30px;
-                    width: 25%;
-                }
-                p{
-                    width: 80%;
-                    span{
-                        font-weight: 700;
-                        color : $primary;
-                    }
-                }
+        margin-bottom:100px;
+        & > *{
+            flex:1 1 0;
+        }
+        p{
+            margin-top:35px;
+            font-size: 1.5em;
+            span{
+                font-weight: 700;
+                display: block;
+
             }
         }
-   }
+    }
 
-   .video{
-     position: relative;
-     z-index: 10;
+    .video{
+        h2{
+            text-align: left;
+        }
+        position: relative;
+        z-index: 10 ;
+        text-align: center;
         div{
             overflow:hidden; 
             padding-bottom:56.25%;
-            position:relative; 
-            height:0;
+             position:relative; 
+             height:0;
             iframe{
-                left:0;
-                top:0; 
-                height:100%;
-                width:100%; 
-                position:absolute;
+                left:0; top:0; height:100%; width:100%; position:absolute;
             }
-        }
-       
-   }
 
-   .arriveBientot{
+        }
+    }
+    .arriveBientot{
         &::before{
             content:"";
             position: absolute;
-            top:-25%;
+            top:-100%;
             left: 50%;
-            display : block;
-            height : 150%;
+            display : inline-block;
+            height : 300%;
             width : 200vw;
             background: $secondary;
             transform:translateX(-50%) skewY( -7.5deg);
             z-index: -1;
         }
         position: relative;
-        margin-top:50px;
-        padding-top:50px;
+        margin-top:100px;
+        padding-top:150px;
         text-align: center;
         z-index: 9;
         background: $secondary;
         
         p{
-            font-size: 1.9em;
+            font-size: 3.5em;
             font-family: $font-title;
             color:$blanc;
             margin-bottom: 50px;
         }
         .logoDownload{
-
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
             img{
-                width: 200px;
-                margin:auto;
+                width: 300px;
+                margin:0 30px;
             }
         }
     }
-    
 
-.contact{
-    margin-top: 150px;
-    .contactContainer{
-        /*display: flex;
-        justify-content: space-between;
-        flex-direction: row;*/
-    }
-    .contactRS{
-        margin-bottom: 25px;
-    }
-    .contactForm{
-        width: 100%;
-        form{
-            width: 100%;
-            div{
-                margin-bottom: 25px;
-                label{
+    .contact{
+        margin-top: 550px;
+        .contactContainer{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .contactForm{
+            width: 40%;
+            form{
+                width: 100%;
+                div{
+                    margin-bottom: 25px;
+                    label{
+                        display: block;
+                        margin-bottom:10px;
+                        font-weight: 700;
+
+                    }
+                    input,
+                    textarea{
+                        width: 100%;
+                        resize:none;
+                        padding:15px;
+                        border-radius: 5px;
+                        outline: none;
+                        border: 1px solid $primary;
+                    }
+                    ::placeholder{
+                        font-style: italic;
+                    }
+                }
+                .btn.submit{
                     display: block;
-                    margin-bottom:10px;
-                    font-weight: 700;
-
-                }
-                input,
-                textarea{
-                    width: 100%;
-                    resize:none;
-                    padding:15px;
+                    margin-top: 25px;
+                    padding: 25px 50px;
                     border-radius: 5px;
-                    outline: none;
-                    border: 1px solid $primary;
+                    width: fit-content;
+                    background: $primary;
+                    font-family: $font-title;
+                    color:$blanc;
+                    text-decoration: none;
                 }
-                ::placeholder{
-                    font-style: italic;
-                }
-            }
-            .btn.submit{
-                display: block;
-                margin:auto;
-                margin-top: 25px;
-                padding: 25px 50px;
-                border-radius: 5px;
-                width: fit-content;
-                background: $primary;
-                font-family: $font-title;
-                color:$blanc;
-                text-decoration: none;
-            }
 
+            }
         }
+
     }
-
-}
-
 }
 
 /*--------------------FOOTER--------------------------*/
 
 footer{
-    width: 100%;
+    width: $width-max;
     margin:auto;
-    margin: 80px auto; 
-    padding:0 10%;
+    margin-top: 150px;
 
         .logo{
             text-align: center;
             margin-bottom: 80px;
-            width: 200px;
-            margin: auto;
+            width: 350px;
             #Socomo_logo{
                 fill:$blanc;
                 width: 50%;
             }
             h3{
                 font-family: $font-title;
-                font-size: 3em;
+                font-size: 4em;
                 font-weight: 500;
                 color: $blanc;
             }

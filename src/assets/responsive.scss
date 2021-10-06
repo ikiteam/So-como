@@ -1,0 +1,311 @@
+@import "./Variable";
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $width-576) { 
+    header{
+        .logo-container{  
+            .logo{
+                #Socomo_logo{
+                    width: 200px;
+                }
+                h1{
+                    font-size: 5em;
+                }
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $width-768) { 
+    header{
+        .logo-container{  
+            .logo{
+                #Socomo_logo{
+                    width: 225px;
+                }
+                h1{
+                    font-size: 6em;
+                }
+            }
+        }
+    }
+    .navbar {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        padding:0 40px;
+        z-index: 100;
+        mix-blend-mode: difference;
+        .icone{
+            display: none;    
+        }
+
+        ul{
+            &::before{
+              display: none;
+            }
+            position: relative;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+   
+            li{
+                visibility: visible;
+                opacity: 1;
+                padding: 0;
+                margin:0;
+                transform: translateX(0);
+                transition: all 250ms ease-in-out;
+                list-style-type: none;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &:nth-child(1){
+                    transition-delay: 0;
+                }
+                &:nth-child(2){
+                    transition-delay: 0;
+                }
+                &:nth-child(3){
+                    transition-delay: 0;
+                }
+    
+                a{
+                    color: $blanc;
+                    font-weight: 100;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+    
+                }
+            }
+    
+        }
+    
+    
+    
+    }
+
+    .container{
+        .info{
+            .infoSocomo{
+                display: flex; 
+                justify-content:  space-between;
+                div{
+                    width: 30%;
+                    display: block;
+                    margin-bottom: 0;
+                    margin: 0 auto;
+                    text-align: center;
+                    .iconeSvg{
+                        display: block;
+                        height: 65px;
+                        margin:auto;
+                        margin-bottom: 30px;
+                    }
+                    p{
+                        width: 90%;
+                        margin: auto;
+                        span{
+                            display: block;
+                            font-weight: 700;
+                            color : $primary;
+                        }
+                    }
+                }
+            }
+        }
+        .arriveBientot{
+            &::before{
+                top:-50%;
+                height : 200%;
+            }
+            .logoDownload{
+                display: flex;
+                justify-content: space-around;
+                img{
+                    width: 200px;
+                    margin:0;
+                }
+            }
+    }
+}
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $width-992) { 
+
+    .container{
+        &::before{
+            content: "";
+            width: 100vw;
+            height: 100%;
+            top:80px;
+            left: 50%;
+            position: absolute;
+            background: $blanc;
+            z-index: -1;
+            transform: translateX(-50%);
+            clip-path: ellipse(160% 50% at 50% 50%);
+        }
+        width: 90%;
+        margin: auto;
+        padding:50px 50px;
+        h2{
+            text-align: left;
+                
+        }
+        .info{
+            h2{
+                margin-bottom:80px;
+            }
+        }
+        .contact{
+            margin-top: 200px;
+            .contactContainer{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+
+                .contactRS{
+                    width: 45%;
+                }
+                .contactForm{
+                    width: 45%;
+                    form{
+                        width: 100%;
+                        div{
+                            margin-bottom: 25px;
+                            label{
+                                display: block;
+                                margin-bottom:10px;
+                                font-weight: 700;
+        
+                            }
+                            input,
+                            textarea{
+                                width: 100%;
+                                resize:none;
+                                padding:15px;
+                                border-radius: 5px;
+                                outline: none;
+                                border: 1px solid $primary;
+                            }
+                            ::placeholder{
+                                font-style: italic;
+                            }
+                        }
+                        .btn.submit{
+                            display: block;
+                            margin-top: 25px;
+                            padding: 25px 50px;
+                            border-radius: 5px;
+                            width: fit-content;
+                            background: $primary;
+                            font-family: $font-title;
+                            color:$blanc;
+                            text-decoration: none;
+                        }
+        
+                    }
+                }
+
+            }
+            
+    
+        }
+    }
+    footer{
+        margin-top:120px;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $width-1200) { 
+    header{
+        max-width: 90%;
+        padding:0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo-container{
+            width: 45%;
+        }
+        .phone{
+            width: 45%;
+            display: block;
+            z-index: 10;
+            img{
+                width: 80%;
+                margin-top:50%;
+            }
+        }
+
+    }
+    .navbar{
+        padding:80px;
+        ul{
+            justify-content: flex-end;
+            li{
+                margin-right:80px;
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+    }
+    .container{
+        max-width: $width-max;
+        h2{
+            font-size: 2.5em;
+        }
+        .info{
+            .infoSocomo{
+                div{
+                    font-size: 1.25em;
+                    .iconeSvg{
+                        height: 85px;
+                    }
+    
+                }
+                
+            }
+        }
+        .arriveBientot{
+            font-size: 1.75em;
+            &::before{
+                height: 300%;
+                top:-100%;
+            }
+            .logoDownload{
+                margin: auto;
+                width: 500px;
+            }
+        }
+        .contact{
+            margin-top:400px;
+        }
+    }
+ }
+
+ @media (min-width: $width-1400) { 
+     header{
+         width: $width-max;
+         padding: 200px 0;
+     }
+    .navbar{
+        ul{
+            justify-content: flex-end;
+            li{
+                margin-right:80px;
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+    }
+ }

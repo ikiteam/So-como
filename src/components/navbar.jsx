@@ -1,9 +1,14 @@
 /* eslint-disable */
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 const Navbar = () => {
+    const [navOpen,setNavOpen] = useState(false)
+
     return (
-        <div className="navbar">
+        <div className={`navbar ${navOpen ? "open" : ""}`}  >
+           <div className="icone" onClick={() => setNavOpen(!navOpen)}>
+               <div/>
+           </div>
             <ul>
                 <li className="linkNav"><a href="#">Accueil</a></li>
                 <li className="linkNav"><a href="#">A propos</a></li>
@@ -12,5 +17,7 @@ const Navbar = () => {
         </div>
     )
 }
+
+
 
 export default Navbar;

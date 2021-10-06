@@ -1,0 +1,258 @@
+@import "./Variable";
+@media screen and ( max-width: $width-max){
+    /*------------------------HEADER-----------------------*/
+
+    header{
+
+        .logo-container{
+            p{
+                font-size: 1.5em;
+            }
+            .logo{
+                #Socomo_logo{
+                    width: 45%;
+                }
+                h1{
+                    font-size: 7em;
+                }
+            }
+        }
+    }
+    /*--------------------CONTAINER--------------------------*/
+    .container{
+        width: 85%;
+        .video {
+            width: 100%;
+        }
+    }
+    /*--------------------FOOTER--------------------------*/
+    footer{
+        width: 85%;
+        .logo{
+            width: 250px;
+        }
+    }
+}
+
+@media screen and ( max-width: $width-769){
+    /*------------------------HEADER-----------------------*/
+
+    header{
+       // overflow-x: hidden;
+        flex-direction: column;
+        justify-content: center;
+        .logo-container{
+            p{
+                font-size: 1.5em;
+            }
+            .logo{
+                #Socomo_logo{
+                    width: 40%;
+                }
+                h1{
+                    font-size: 6em;
+                }
+            }
+
+        }
+        .phone{
+            display: none ;
+        }
+    }
+
+    /*------------------------NAV---------------------------*/
+
+    .navbar {
+        .icone {
+           display:flex;
+        }
+        ul{
+            &::before{
+                content: "";
+                position: absolute;
+                top:50px;
+                right: 50px;
+                transform-origin: center center;
+                background: $blanc;
+                border-radius: 50%;
+                width: 1px;
+                height: 1px;
+                transition: transform 0.5s 450ms ease-in-out;
+                z-index: -1;
+            }
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top:0;
+            right: 0;
+            width: 100vw;
+            height: 100vh;
+           // background: $blanc;
+            z-index: 100;
+
+
+            li{
+                padding: 0;
+                margin-bottom:80px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(30px);
+                transition: all 250ms ease-in-out;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &:nth-child(1){
+                    transition-delay: 100ms;
+                }
+                &:nth-child(2){
+                    transition-delay: 50ms;
+                }
+                &:nth-child(3){
+                    transition-delay: 0ms;
+                }
+
+                a{
+                    color: $secondary;
+                    font-weight: 500;
+                    font-size: 2em;
+                    text-transform: unset;
+                    letter-spacing: 0;
+
+                }
+            }
+
+        }
+    }
+    /*--------------------CONTAINER--------------------------*/
+    .container{
+        .video {
+            width: 100%;
+        }
+        .infoSocomo{
+            flex-direction: column;
+            div{
+                margin-bottom: 50px;
+            }
+        }
+        .arriveBientot{
+            padding-top:50px;
+            &::before{
+                height:200%;
+                top:-50%;
+            }
+
+        }
+        .contact{
+            margin-top:350px;
+
+            .contactContainer{
+                flex-direction: column;
+                .contactForm{
+                    width: 100%;
+                    margin-top:50px;
+                }
+            }
+        }
+    }
+    /*--------------------FOOTER--------------------------*/
+    footer{
+        width: 85%;
+        .logo{
+            width: 250px;
+        }
+    }
+}
+
+@media screen and ( max-width: $width-576){
+    /*------------------------HEADER-----------------------*/
+body{
+    text-align: center;
+}
+    header{
+        padding-top:0;
+        .logo-container{
+            p{
+                font-size: 1.5em;
+            }
+            .logo{
+                #Socomo_logo{
+                    width: 25%;
+                }
+                h1{
+                    font-size: 3.5em;
+                }
+            }
+
+        }
+        .phone{
+            display: none ;
+        }
+    }
+
+    /*------------------------NAV---------------------------*/
+
+    .navbar {
+        padding:0 25px;
+        .icone {
+            top: 35px;
+            right: 25px;
+            display:block;
+        }
+        ul{
+            &::before{
+                top:35px;
+                right:40px;
+            }
+        }
+
+    }
+    /*--------------------CONTAINER--------------------------*/
+    .container{
+        width:100%;
+        padding:40px;
+        margin: 0;
+        .video {
+            width: 100%;
+            h2{
+                text-align: center;
+            }
+        }
+
+        .arriveBientot{
+            font-size: 0.75em;
+            &::before{
+                height:150%;
+                top:-35%;
+            }
+            .logoDownload{
+                flex-direction: column;
+                width: 50%;
+                margin: auto;
+                img{
+                    width: 100%;
+                    margin: 0 0 25px 0px;
+                }
+            }
+
+        }
+        .contact{
+            margin-top:150px;
+            .contactForm{
+                label{
+                    text-align: left;
+                }
+            }
+        }
+    }
+    /*--------------------FOOTER--------------------------*/
+    footer{
+        width: 85%;
+        .logo{
+            width: 250px;
+        }
+    }
+}
+
+

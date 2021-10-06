@@ -7,12 +7,12 @@ const ContactForm = () => {
             
             <div>
                 <label htmlFor="mail">Mail</label>
-                <input type="text" id="mail" placeholder="mail" />
+                <input type="text" id="mail" placeholder="Mail" />
             </div>
 
             <div>
                 <label htmlFor="objet">Objet</label>
-                <input type="text" id="objet" placeholder="objet"/>
+                <input type="text" id="objet" placeholder="Objet"/>
             </div>
 
             <div>
