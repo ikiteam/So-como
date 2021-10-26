@@ -1,3 +1,6 @@
+import { useRef, useEffect, useLayoutEffect, useState } from "react";
+import { gsap, TimelineMax } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../../components/navbar";
 import Video from "../../components/video";
 import "../../assets/home.scss";
@@ -8,8 +11,188 @@ import Google from "../../assets/img/google-play.png"
 import Apple from "../../assets/img/apple-store.png"
 import ContactForm from "../../components/ContactForm";
 const Home = () => {
+    const ref = useRef(null);
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    /*------------------------------------------------------------------------------*/
+    /*                             SMOOTH SCROLL                                    */
+    /*------------------------------------------------------------------------------*/
+
+    function smoothScroll(content, viewport, smoothness) {
+        content = gsap.utils.toArray(content)[0];
+        smoothness = smoothness || 1;
+
+        gsap.set(viewport || content.parentNode, { overflow: "hidden", position: "fixed", height: "100%", width: "100%", top: 0, left: 0, right: 0, bottom: 0 });
+        gsap.set(content, { overflow: "visible", width: "100%" });
+
+        let getProp = gsap.getProperty(content),
+            setProp = gsap.quickSetter(content, "y", "px"),
+            setScroll = ScrollTrigger.getScrollFunc(window),
+            removeScroll = () => content.style.overflow = "visible",
+            killScrub = trigger => {
+                let scrub = trigger.getTween ? trigger.getTween() : gsap.getTweensOf(trigger.animation)[0]; // getTween() was added in 3.6.2
+                scrub && scrub.kill();
+                trigger.animation.progress(trigger.progress);
+            },
+            height, isProxyScrolling;
+
+        function onResize() {
+            height = content.clientHeight;
+            content.style.overflow = "visible"
+            document.body.style.height = height + "px";
+        }
+        onResize();
+        ScrollTrigger.addEventListener("refreshInit", onResize);
+        ScrollTrigger.addEventListener("refresh", () => {
+            removeScroll();
+            requestAnimationFrame(removeScroll);
+        })
+        ScrollTrigger.defaults({ scroller: content });
+        ScrollTrigger.prototype.update = p => p; // works around an issue in ScrollTrigger 3.6.1 and earlier (fixed in 3.6.2, so this line could be deleted if you're using 3.6.2 or later)
+
+        ScrollTrigger.scrollerProxy(content, {
+            scrollTop(value) {
+                if (arguments.length) {
+                    isProxyScrolling = true; // otherwise, if snapping was applied (or anything that attempted to SET the scroll proxy's scroll position), we'd set the scroll here which would then (on the next tick) update the content tween/ScrollTrigger which would try to smoothly animate to that new value, thus the scrub tween would impede the progress. So we use this flag to respond accordingly in the ScrollTrigger's onUpdate and effectively force the scrub to its end immediately.
+                    setProp(-value);
+                    setScroll(value);
+                    return;
+                }
+                return -getProp("y");
+            },
+            getBoundingClientRect() {
+                return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+            }
+        });
+
+        return ScrollTrigger.create({
+            animation: gsap.fromTo(content, { y: 0 }, {
+                y: () => document.documentElement.clientHeight - height,
+                ease: "none",
+                onUpdate: ScrollTrigger.update
+            }),
+            scroller: window,
+            invalidateOnRefresh: true,
+            start: 0,
+            end: () => height - document.documentElement.clientHeight,
+            scrub: smoothness,
+            onUpdate: self => {
+                if (isProxyScrolling) {
+                    killScrub(self);
+                    isProxyScrolling = false;
+                }
+            },
+            onRefresh: killScrub // when the screen resizes, we just want the animation to immediately go to the appropriate spot rather than animating there, so basically kill the scrub.
+        });
+    }
+
+    /*------------------------------------------------------------------------------*/
+    /*------------------------------------------ANIMATIONS--------------------------*/
+    /*------------------------------------------------------------------------------*/
+
+    useLayoutEffect(() => {
+        const element = ref.current;
+        const tl = new TimelineMax({ paused: true });
+        // smoothScroll("#content");
+        tl.from(element.querySelector(".logo"), { opacity: 0, duration: 2, ease: "power2.inOut" })
+            .from(element.querySelector(".logo-container p"), { y: 30, opacity: 0, duration: 0.75, ease: "power2.inOut" }, "-=1.5")
+            .from(element.querySelector(".phone"), { y: 40, opacity: 0, duration: 1, ease: "power2.inOut" }, "-=1")
+            .from(element.querySelector(".navbar"), { opacity: 0, duration: 1, ease: "power2.inOut" }, "-=1")
+            //.from(element.querySelector(".infos"), { opacity: 0, duration: 1, ease: "power2.inOut" }, "#infos")
+            .play();
+        return () => {
+            tl.kill();
+        };
+    }, []);
+    useEffect(() => {
+        const element = ref.current;
+        gsap.from(element.querySelector(".container"), {
+            scrollTrigger: {
+                trigger: element.querySelector(".container"),
+                start: "top 95%",
+
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.75,
+            ease: "power2.inOut"
+        })
+    }, []);
+    useEffect(() => {
+        const element = ref.current;
+        gsap.from(element.querySelector(".info"), {
+            scrollTrigger: {
+                trigger: element.querySelector(".info"),
+                start: "top 95%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.75,
+            ease: "power2.inOut"
+        })
+    }, []);
+    useEffect(() => {
+        const element = ref.current;
+        gsap.from(element.querySelector(".video"), {
+            scrollTrigger: {
+                trigger: element.querySelector(".video"),
+                start: "top 90%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.75,
+            ease: "power2.inOut"
+        })
+    }, []);
+    useEffect(() => {
+        const element = ref.current;
+        gsap.from(element.querySelector(".arriveBientot"), {
+            scrollTrigger: {
+                trigger: element.querySelector(".arriveBientot"),
+                start: "top 90%",
+
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.75,
+            ease: "power2.inOut"
+        })
+    }, []);
+    useEffect(() => {
+        const element = ref.current;
+        gsap.from(element.querySelector(".contact"), {
+            scrollTrigger: {
+                trigger: element.querySelector(".contact"),
+                start: "top 90%",
+
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.75,
+            ease: "power2.inOut"
+        })
+    }, []);
+    useEffect(() => {
+        const element = ref.current;
+        gsap.from(element.querySelector("footer"), {
+            scrollTrigger: {
+                trigger: element.querySelector("footer"),
+                start: "top 90%",
+            },
+            opacity: 0,
+            duration: 0.75,
+            ease: "power2.inOut"
+        })
+    }, []);
+
+    /*------------------------------------------------------------------------------*/
+    /*------------------------------------------AUTRE-------------------------------*/
+    /*------------------------------------------------------------------------------*/
+
+
     return (
-        <div className="Home">
+        <div className="Home" id="content" ref={ref}  >
             <Navbar />
             <header>
                 <div className="logo-container">
@@ -18,8 +201,9 @@ const Home = () => {
                         <h1>Socomo</h1>
                     </div>
 
-                    <p>L'appli pour des bons plans près de chez vous !</p>
-                    <p>(bientôt disponible en téléchargement)</p>
+                    <p>L'appli pour des bons plans près de chez vous !
+                        <span>(bientôt disponible en téléchargement)</span>
+                    </p>
                 </div>
                 <div className="phone">
                     <img src={Phone} alt="apercu de l'application" />
@@ -28,7 +212,7 @@ const Home = () => {
             </header>
             <div className="container">
                 <div className="info" id="apropos">
-                    <h2>Socomo, qu'est-ce c'est?</h2>
+     <h2>Socomo, qu'est-ce c'est?</h2>
                     <div className="infoSocomo">
                         <div>
                             <svg className="iconeSvg" viewBox="0 0 60 77" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +238,7 @@ const Home = () => {
                     </div>
                 </div>
                 <Video />
-                <div className="arriveBientot">
+                <div className="arriveBientot" >
                     <p>Application bientôt disponible sur </p>
                     <div className="logoDownload">
                         <img src={Google} alt="logo playstrore" />
@@ -62,6 +246,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="contact" id="contact">
+
                     <h2>Contactez-nous</h2>
                     <div className="contactContainer">
                         <div className="contactRS">
