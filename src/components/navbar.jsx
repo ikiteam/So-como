@@ -18,19 +18,17 @@ const Navbar = () => {
         }
     }
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-    })
-
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
     }
 
     useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
         window.addEventListener('resize', handleWindowSizeChange);
         setIsMobile(width <= 768 ? true : false);
         return () => {
             window.removeEventListener('resize', handleWindowSizeChange);
+            window.removeEventListener('scroll', handleScroll)
         }
     });
 
