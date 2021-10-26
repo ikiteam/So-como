@@ -87,7 +87,7 @@ header{
     height: 200px;
     padding:0 80px;*/
    //width: 100%;   
-    transition: all 0.5s;
+    transition: background-color 0.25s, padding 0.25s;
     &.open{
        
         .icone{
@@ -267,10 +267,9 @@ header{
 
     &.scroll{
             height: 60px;
-            background: rgba($blanc,0.85);
+            background-color: rgba($blanc,0.85);
             padding:40px 80px;
             backdrop-filter: blur(10px);
- 
             ul{
                 li{
                     a{
