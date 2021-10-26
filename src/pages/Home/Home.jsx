@@ -206,13 +206,13 @@ const Home = () => {
                     </p>
                 </div>
                 <div className="phone">
-                    <img src={Phone} alt="" />
+                    <img src={Phone} alt="apercu de l'application" />
                 </div>
 
             </header>
-            <div className="container" >
-                <div className="info">
-                    <h2>Socomo, qu'est-ce c'est?</h2>
+            <div className="container">
+                <div className="info" id="apropos">
+     <h2>Socomo, qu'est-ce c'est?</h2>
                     <div className="infoSocomo">
                         <div>
                             <svg className="iconeSvg" viewBox="0 0 60 77" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -241,11 +241,12 @@ const Home = () => {
                 <div className="arriveBientot" >
                     <p>Application bientôt disponible sur </p>
                     <div className="logoDownload">
-                        <img src={Google} alt="" />
-                        <img src={Apple} alt="" />
+                        <img src={Google} alt="logo playstrore" />
+                        <img src={Apple} alt="logo appstore" />
                     </div>
                 </div>
-                <div className="contact" >
+                <div className="contact" id="contact">
+
                     <h2>Contactez-nous</h2>
                     <div className="contactContainer">
                         <div className="contactRS">

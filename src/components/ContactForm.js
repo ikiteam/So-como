@@ -35,20 +35,20 @@ const ContactForm = () => {
                 <Form method="POST"  className="form">
                     <div>
                         <label htmlFor="mail">Mail</label>
-                        <input type="text" id="mail" placeholder="e-mail" name="mail"/>
                         {errors.mail && touched.mail ? <span className="errorsMessage">{errors.mail}</span> : null}
+                        <input type="text" id="mail" placeholder="e-mail" name="mail"/>
                     </div>
 
                     <div>
                         <label htmlFor="objet">Objet</label>
-                        <input type="text" id="objet" placeholder="Objet" name="Objet"/>
                         {errors.objet && touched.objet ? <span className="errorsMessage">{errors.objet}</span> : null}
+                        <input type="text" id="objet" placeholder="Objet" name="Objet"/>
                     </div>
 
                     <div>
                         <label htmlFor="message">Message</label>
-                        <textarea name="message" id="message" placeholder="Entrez votre message" cols="30" rows="10"/>
                         {errors.message && touched.message ? <span className="errorsMessage">{errors.message}</span> : null}
+                        <textarea name="message" id="message" placeholder="Entrez votre message" cols="30" rows="10"/>
 
                     </div>
                     <button type="submit" className="btn submit">Envoyer</button>
