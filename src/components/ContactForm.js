@@ -2,6 +2,10 @@ import React from 'react';
 import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 
+/*------------------------------------------------------------------------------*/
+/*                             SECURISATION FORM                                */
+/*------------------------------------------------------------------------------*/
+
 const errorsMessage = "ce champ est requis";
 
 const FormSchema = Yup.object().shape({
