@@ -19,7 +19,7 @@ const ContactForm = () => {
                 .required(errorsMessage),
             object: Yup.string()
                 .min(5, 'l\'objet doit faire 5 caractères minimun.')
-                .max(30, 'l\'objet doit faire moin de 30 caractères.')
+                .max(30, 'l\'objet doit faire moins de 30 caractères.')
                 .required(errorsMessage),
             message: Yup.string()
                 .min(10, "Vous devez saisir 10 caractères minimun.")
