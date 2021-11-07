@@ -34,8 +34,10 @@ const ContactForm = () => {
             emailjs.sendForm('service_krkylsr', 'template_up4361d', form.current, 'user_lQfT3X6zkLYWzW5Fe6GTv')
                 .then((result) => {
                     console.log(result.text);
+                    alert('message envoyée')
                 }, (error) => {
                     console.log(error.text);
+                    alert('une erreur est survenue')
                 });
         },
 
@@ -65,7 +67,7 @@ const ContactForm = () => {
                           {...formik.getFieldProps('message')}/>
 
             </div>
-            <button type="submit" disabled={formik.isSubmitting} className="btn submit">Envoyer
+            <button type="submit" disabled={formik.isSubmitting} onClick={sendMessage} className="btn submit">Envoyer
             </button>
         </form>
     );
