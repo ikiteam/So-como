@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
+import emailjs from 'emailjs-com';
 
 
 
 const ContactForm = () => {
     const errorsMessage = "ce champ est requis";
+    const form = useRef();
 
     const formik = useFormik({
         initialValues: {
@@ -27,11 +29,19 @@ const ContactForm = () => {
 
         }),
         onSubmit: values => {
-            console.log(values)
+            console.log('values', values);
+
+            emailjs.sendForm('service_krkylsr', 'template_up4361d', form.current, 'user_lQfT3X6zkLYWzW5Fe6GTv')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
         },
+
     });
     return (
-        <form action="#" method="post" onSubmit={formik.handleSubmit} className="form">
+            <form action="#" method="post" ref={form} onSubmit={formik.handleSubmit} className="form">
             <div>
                 <label htmlFor="email">Mail</label>
                 {formik.touched.email && formik.errors.email ? (
@@ -55,7 +65,8 @@ const ContactForm = () => {
                           {...formik.getFieldProps('message')}/>
 
             </div>
-            <button type="submit" className="btn submit">Envoyer</button>
+            <button type="submit" disabled={formik.isSubmitting} className="btn submit">Envoyer
+            </button>
         </form>
     );
 
