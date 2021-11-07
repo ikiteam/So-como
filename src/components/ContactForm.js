@@ -67,7 +67,7 @@ const ContactForm = () => {
                           {...formik.getFieldProps('message')}/>
 
             </div>
-            <button type="submit" disabled={formik.isSubmitting} onClick={sendMessage} className="btn submit">Envoyer
+            <button type="submit" disabled={formik.isSubmitting} className="btn submit">Envoyer
             </button>
         </form>
     );
