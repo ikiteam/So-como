@@ -3,7 +3,9 @@ import * as Yup from 'yup';
 import {useFormik} from 'formik';
 import emailjs from 'emailjs-com';
 
-
+/*------------------------------------------------------------------------------*/
+/*                             SECURISATION FORM                                */
+/*------------------------------------------------------------------------------*/
 
 const ContactForm = () => {
     const errorsMessage = "ce champ est requis";
