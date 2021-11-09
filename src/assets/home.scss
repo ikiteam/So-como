@@ -131,12 +131,9 @@ header{
                     transition: all 250ms ease-in-out;
                 }
                 &::before{
-                    //transform-origin:left top ;
                     transform: translateY(0) rotate(45deg);
                 }
                 &::after{
-                    background: $secondary;
-                    //transform-origin:left bottom ;
                     transform:translateY(0) rotate(-45deg);
                 }
             }
@@ -184,6 +181,7 @@ header{
                 width: 100%;
                 background: $blanc;
                 border-radius: 5px;
+                transition-delay: 0.5s;
                 &::before,
                 &::after{
                     border-radius: 10%;
@@ -197,11 +195,11 @@ header{
                     transition: all 250ms 500ms ease-in-out;
                 }
                 &::before{
-                    transform:translateY(-10px);
+                    transform:translateY(-10px) rotate(0deg);
 
                 }
                 &::after{
-                    transform:translateY(10px);
+                    transform:translateY(10px) rotate(0deg);
                 }
             }
 
