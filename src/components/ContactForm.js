@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React, {useRef} from 'react';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
 import emailjs from 'emailjs-com';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 /*------------------------------------------------------------------------------*/
 /*                             SECURISATION FORM                                */
@@ -10,6 +12,13 @@ import emailjs from 'emailjs-com';
 const ContactForm = () => {
     const errorsMessage = "ce champ est requis";
     const form = useRef();
+    const recaptcha = function onChange(value) {
+        if(value !== "")
+            document.getElementById('btnSend').disabled = false;
+        else
+            document.getElementById('btnSend').disabled = true;
+    }
+
 
     const formik = useFormik({
         initialValues: {
@@ -45,7 +54,7 @@ const ContactForm = () => {
 
     });
     return (
-            <form action="#" method="post" ref={form} onSubmit={formik.handleSubmit} className="form">
+        <form action="#" method="post" ref={form} onSubmit={formik.handleSubmit} className="form">
             <div>
                 <label htmlFor="email">Mail</label>
                 {formik.touched.email && formik.errors.email ? (
@@ -69,8 +78,11 @@ const ContactForm = () => {
                           {...formik.getFieldProps('message')}/>
 
             </div>
-            <button type="submit" disabled={formik.isSubmitting} className="btn submit">Envoyer
-            </button>
+            <div>
+                <ReCAPTCHA sitekey="6Le36y0dAAAAAOMdsvpGWzcq1MPJzU5_LrH2tJXu"
+                onChange={recaptcha}/>
+                <button type="submit" disabled={formik.isSubmitting} id="btnSend" className="btn submit">Envoyer</button>
+            </div>
         </form>
     );
 

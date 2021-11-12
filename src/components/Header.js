@@ -1,8 +1,8 @@
 import React from "react";
 
-const Header = ({ children }) => {
+const Header = ({ children  }) => {
     return (
-        <header>
+        <header >
             {children}
         </header>
     );

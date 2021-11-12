@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useRef, useState } from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Navbar = (props) => {
@@ -24,8 +24,6 @@ const Navbar = (props) => {
             window.removeEventListener('scroll', handleScroll)
         }
     });
-
-
 
 
 

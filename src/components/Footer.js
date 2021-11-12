@@ -18,6 +18,9 @@ const Footer = () => {
                     <li>
                         <Link to="/condition-general-vente">CGV</Link>
                     </li>
+                    <li>
+                        <Link to="/politique-de-confidentialité">politique de confidentialité</Link>
+                    </li>
                 </ul>
             </div>
         </footer>

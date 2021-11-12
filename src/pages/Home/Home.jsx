@@ -13,7 +13,6 @@ import Apple from "../../assets/img/apple-store.png"
 import ContactForm from "../../components/ContactForm";
 
 
-
 const Home = () => {
     const ref = useRef(null);
 

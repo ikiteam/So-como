@@ -75,7 +75,7 @@ const LegalMention = () => {
                 <p>Conformément aux dispositions de la loi 78-17 du 6 janvier 1978 modifiée, l’utilisateur du site
                     <a href="https://www.so-como.fr">https://www.so-como.fr/.</a> dispose d’un droit d’accès, de
                     modification et de suppression des informations collectées. Pour exercer ce droit, envoyez un message
-                    à notre Délégué à la Protection des Données :
+                            à notre Délégué à la Protection des Données :
                 - <a href= "mailto:direction@so-como.fr"> direction@so-como.fr</a>.
 
                 Pour plus d'informations sur la façon dont nous traitons vos données (type de données, finalité,
