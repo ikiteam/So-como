@@ -79,7 +79,7 @@ const ContactForm = () => {
 
             </div>
             <div>
-                <ReCAPTCHA sitekey="6Le36y0dAAAAAOMdsvpGWzcq1MPJzU5_LrH2tJXu"
+                <ReCAPTCHA sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
                 onChange={recaptcha}/>
                 <button type="submit" disabled={formik.isSubmitting} id="btnSend" className="btn submit">Envoyer</button>
             </div>
