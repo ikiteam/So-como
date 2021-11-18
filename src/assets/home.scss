@@ -18,7 +18,12 @@ body {
     overflow-x: hidden;
 }
 
-
+h1{
+    font-family: $font-title;
+    font-size: 3.5em;
+    font-weight: 500;
+    color: $blanc;
+}
 a{
     position: relative;
     &::before{
@@ -50,8 +55,14 @@ a{
 
 /*------------------------HEADER-----------------------*/
 
+.Home{
+    header{
+        height: 100vh;
+    }
+}
+
 header{
-    height: 100vh;
+    height: 250px;
     width: 100%;
     margin: auto;
     padding: 0 10%;
@@ -60,6 +71,7 @@ header{
     justify-content: center;
     text-align: center;
     position: relative;
+    
     &::before{
         content:"";
         position: absolute;
@@ -94,12 +106,6 @@ header{
                 fill:$blanc;
                 width: 125px;
             }
-            h1{
-                font-family: $font-title;
-                font-size: 3.5em;
-                font-weight: 500;
-                color: $blanc;
-            }
         }
 
     }
@@ -122,12 +128,14 @@ header{
        
         .icone{
             mix-blend-mode: normal;
+            transition: all 250ms ease-in-out;
             div{
-               
+                background: $primary;
                 &::before,&::after{
                     
                     transform-origin: 50% 50%;
-                    background: $secondary;
+                    //background: $secondary;
+                   
                     transition: all 250ms ease-in-out;
                 }
                 &::before{
@@ -164,27 +172,31 @@ header{
     }
     .icone{
         position: fixed;
-        top:20px;
-        right:20px;
-        width: 30px;
-        height: 30px;
+        top:30px;
+        right:30px;
+        width: 45px;
+        height: 45px;
+        padding: 10px;
+        border-radius: 7px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        mix-blend-mode: difference;
+        transition: all 250ms 750ms ease-in-out;
         z-index: 1000;
             div{
                 height: 3px;
                 width: 100%;
                 background: $blanc;
                 border-radius: 5px;
-                transition-delay: 0.5s;
+                transition: all 250ms ease-in-out;
+               position: relative;
+            
                 &::before,
                 &::after{
-                    border-radius: 10%;
+                    border-radius: 15px;
                     content: "";
                     position: absolute;
                     width: 100%;
@@ -192,7 +204,7 @@ header{
                     left:0;
                     background: $blanc;
                     transform-origin: 50% 50%;
-                    transition: all 250ms 500ms ease-in-out;
+                    transition: all 250ms ease-in-out;
                 }
                 &::before{
                     transform:translateY(-10px) rotate(0deg);
@@ -210,8 +222,8 @@ header{
         &::before{
             content: "";
             position: absolute;
-            top: 35px;
-            right: 35px;
+            top: 55px;
+            right: 55px;
             transform-origin: center center;
             background: $blanc;
             border-radius: 50%;
@@ -268,26 +280,42 @@ header{
         }
 
     }
-
-    &.scroll{
-            height: 60px;
-            background-color: rgba($secondary,0.80);
-            padding:40px 80px;
-            backdrop-filter: blur(5px);
-            ul{
-                li{
-                    a{
-                        color: $blanc;
-                    }
+    &.mobile.scroll{
+        .icone{
+            transition: all 250ms ease-in-out;
+            background: $primary;
+        }
+    }
+    &.mobile:not(.scroll).open{
+        .icone{
+            background: $primary;
+        }
+    }
+    &.scroll:not(.mobile){
+        height: 60px;
+        background-color: rgba($secondary,0.80);
+        padding:40px 80px;
+        backdrop-filter: blur(5px);
+        ul{
+            li{
+                a{
+                    color: $blanc;
                 }
             }
-    }
+        }
+}
 
 }
 
 
 /*--------------------CONTAINER--------------------------*/
-
+.Home{
+    .container{
+        h2:first-of-type{
+            margin-top: 0;
+        }
+    }
+}
 .container{
    width: 100%;
    background: $blanc;
@@ -299,8 +327,13 @@ header{
        color:$primary;
        font-size: 2em;
        text-align: center;
+       margin-top:50px;
        margin-bottom:50px;
        
+   }
+   h3{
+       margin-top:35px;
+       margin-bottom:15px;
    }
 
    .info{
@@ -394,6 +427,21 @@ header{
     }
     .contactRS{
         margin-bottom: 25px;
+        ul{
+            margin-top:30px;
+            margin-bottom: 30px; 
+            display: flex;
+            li{
+                list-style-type: none;
+                &:first-of-type{
+                    margin-right: 30px;
+                }
+                a{
+                    color:$primary;
+                    font-size: 2.25em;
+                }
+            }
+        }
     }
     .contactForm{
         width: 100%;
@@ -434,6 +482,7 @@ header{
                 text-decoration: none;
                 border: 3px solid $primary;
                 transition: color 0.25s;
+                font-size: 1.15em;
                 &::before{
                     height: 100%;
                     width: 100%;

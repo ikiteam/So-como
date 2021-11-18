@@ -7,11 +7,12 @@ import Video from "../../components/video";
 import "../../assets/home.scss";
 import "../../assets/responsive.scss";
 import Logo from "../../components/Logo";
-import Phone from "../../assets/img/telephone2.png"
-import Google from "../../assets/img/google-play.png"
-import Apple from "../../assets/img/apple-store.png"
+import Phone from "../../assets/img/telephone2.png";
+import Google from "../../assets/img/google-play.png";
+import Apple from "../../assets/img/apple-store.png";
 import ContactForm from "../../components/ContactForm";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
     const ref = useRef(null);
@@ -198,7 +199,10 @@ const Home = () => {
                         <h2>Contactez-nous</h2>
                         <div className="contactContainer">
                             <div className="contactRS">
-                                <p>Pour plus d'informations sur l'application</p>
+                                <p>N'hésitez pas à nous contacter pour plus d'informations sur l'application.</p>
+                                <p>Ou, retrouvez-nous sur les réseaux sociaux !</p>
+                                <ul><li><a href="https://www.facebook.com/socomofrance" target="_blank"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                                    <li><a href="https://www.instagram.com/socomo_fr" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a></li></ul>
                             </div>
                             <div className="contactForm">
                                 <ContactForm />

@@ -13,13 +13,13 @@ const Footer = () => {
             <div className="link">
                 <ul>
                     <li>
-                        <Link to="/mention-legal">mention légal</Link>
+                        <Link to="/mention-legal">Mentions légales</Link>
                     </li>
                     <li>
                         <Link to="/condition-general-vente">CGV</Link>
                     </li>
                     <li>
-                        <Link to="/politique-de-confidentialité">politique de confidentialité</Link>
+                        <Link to="/politique-de-confidentialité">Politique de confidentialité</Link>
                     </li>
                 </ul>
             </div>

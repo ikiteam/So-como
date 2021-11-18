@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom";
+import { HashLink as Linker } from 'react-router-hash-link';
 
 
 const Navbar = (props) => {
@@ -9,7 +10,7 @@ const Navbar = (props) => {
 
     const handleScroll = () => {
         const offset = window.scrollY;
-        if (offset > 160 && !props.isMobile) {
+        if (offset > 160) {
             setScrolled(true);
         }
         else {
@@ -29,14 +30,14 @@ const Navbar = (props) => {
 
 
     return (
-        <div className={`navbar ${navOpen ? "open" : ""} ${scrolled ? "scroll" : ""}`}  >
+        <div className={`navbar ${navOpen ? "open" : ""} ${props.isMobile ? "mobile" : ""} ${scrolled ? "scroll" : ""}`}  >
             <div className="icone" onClick={() => setNavOpen(!navOpen)}>
                 <div />
             </div>
             <ul>
                 <li className="linkNav"><Link to="/">Accueil</Link></li>
-                <li className="linkNav"><a href="#apropos">A propos</a></li>
-                <li className="linkNav"><a href="#contact">Contact</a></li>
+                <li className="linkNav"><Linker to="/#apropos">A propos</Linker></li>
+                <li className="linkNav"><Linker to="/#contact">Contact</Linker></li>
             </ul>
         </div>
     )

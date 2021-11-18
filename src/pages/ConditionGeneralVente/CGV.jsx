@@ -9,203 +9,174 @@ const ConditionGeneral = () => {
                 <h1>Condition général de vente</h1>
             </Header>
             <div className="container">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda beatae deleniti dolor
-                    doloribus earum ex id illum obcaecati quae quis quo repellat repudiandae saepe sequi, tempore unde
-                    veniam voluptate.
+                En vigueur au 01/12/2021
+    
+    
+<h2>ARTICLE 1 - Champ d'application</h2>
+
+                <div>Les présentes Conditions Générales de Vente (dites « CGV ») s'appliquent, sans restriction ni réserve à tout achat des services de suivants :
+                Espace de communication digital
+                abonnement unique
+                abonnement mensuel
+                abonnement trimestriel
+                abonnement annuel
+                
+                tels que proposés par le Prestataire aux clients non professionnels (« Les Clients ou le Client ») sur le site so-como Adresse du site  www.so-como.fr
+                Les caractéristiques principales des Services sont présentées sur le site internet www.so-como.fr.
+                Le Client est tenu d'en prendre connaissance avant toute passation de commande. Le choix et l'achat d'un Service est de la seule responsabilité du Client.
+                
+                Ces CGV sont accessibles à tout moment sur le site so-como Adresse du site  www.so-como.fr et prévaudront sur toute autre document.
+                Le Client déclare avoir pris connaissance des présentes CGV et les avoir acceptées en cochant la case prévue à cet effet avant la mise en œuvre de la procédure de commande en ligne du site #363 Adresse du site....
+                Sauf preuve contraire, les données enregistrées dans le système informatique du Prestataire constituent la preuve de l'ensemble des transactions conclues avec le Client.
+                
+                Les coordonnées du Prestataire sont les suivantes :
+                So Como, Auto entreprise
+                Immatriculé au RCS de Orléans, sous le numéro 51260996700025
+                35 Rue Dédale
+                mail : direction@so-como.fr
+                téléphone : 0615490004
+                
+                Des droits de douane ou autres taxes locales ou droits d'importation ou taxes d'état sont susceptibles d'être exigibles. Ils seront à la charge et relèvent de la seule responsabilité du Client.
                 </div>
-                <div>Ab animi dicta dignissimos iure nisi, nobis perspiciatis porro quasi quidem soluta. Ad at deleniti
-                    dolor dolore ex excepturi facilis impedit ipsa iusto labore numquam, optio quas quo tenetur ut.
+<h2>ARTICLE 2 - Prix</h2>
+
+<div> Les Services sont fournis aux tarifs en vigueur figurant sur le site #363 Adresse du site..., lors de l'enregistrement de la commande par le Prestataire.
+                Les prix sont exprimés en Euros, HT et TTC.
+                Les tarifs tiennent compte d'éventuelles réductions qui seraient consenties par le Prestataire sur le site #363 Adresse du site....
+                Ces tarifs sont fermes et non révisables pendant leur période de validité mais le Prestataire se réserve le droit, hors période de validité, d’en modifier les prix à tout moment.
+                Les prix ne comprennent pas les frais de traitement, d'expédition, de transport et de livraison, qui sont facturés en supplément, dans les conditions indiquées sur le site et calculés préalablement à la passation de la commande.
+                Le paiement demandé au Client correspond au montant total de l'achat, y compris ces frais.
+                Une facture est établie par le Prestataire et remise au Client lors de la fourniture des Services commandés.
                 </div>
-                <div>Accusamus culpa labore minus tempore vel? Aut cupiditate dolorem et hic in minus repellat? Beatae
-                    cupiditate ea et ex fuga laudantium mollitia nemo, odit quam quis tempore, vel velit voluptas?
+<h2>ARTICLE 3 – Commandes</h2>
+
+<div>Il appartient au Client de sélectionner sur le site so-como Adresse du site  www.so-como.fr les Services qu'il désire commander, selon les modalités suivantes :
+                1 - Création d’un compte client.
+                2 - Sélection de l’abonnement souhaité.
+                3 - Confirmation du paiement.
+                La vente ne sera considérée comme valide qu’après paiement intégral du prix. Il appartient au Client de vérifier l'exactitude de la commande et de signaler immédiatement toute erreur.
+                Toute commande passée sur le site www.so-como.fr constitue la formation d'un contrat conclu à distance entre le Client et le Prestataire.
+                Le Prestataire se réserve le droit d'annuler ou de refuser toute commande d'un Client avec lequel il existerait un litige relatif au paiement d'une commande antérieure.
+                Le Client pourra suivre l'évolution de sa commande sur le site.
                 </div>
-                <div>Aperiam deleniti enim est libero reiciendis rerum totam ullam voluptatem. Beatae consequatur
-                    consequuntur dicta doloribus et facilis magni molestias necessitatibus perspiciatis repellendus
-                    totam velit vero, voluptates? Autem doloremque ea perspiciatis.
+<h2>ARTICLE 4 - Conditions de paiement</h2>
+
+<div>Le prix est payé par voie de paiement sécurisé, selon les modalités suivantes :
+                paiement par carte bancaire
+                ou paiement par chèque
+                ou paiement par virement bancaire sur le compte bancaire du Vendeur (dont les coordonnées sont communiquées au Client lors de la passation de la commande)
+                
+                Pour le paiement par carte bancaire, le débit de la carte n'est effectué qu'au moment de la fourniture des Services.
+                
+                Les données de paiement sont sont échangées en mode crypté grâce au protocole défini par le prestataire de paiement agréé intervenant pour les transactions bancaires réalisées sur le site www.so-como.fr.
+                
+                Les paiements effectués par le Client ne seront considérés comme définitifs qu'après encaissement effectif des sommes dues, par le Prestataire.
+                Le Prestataire ne sera pas tenu de procéder à la fourniture des Services commandés par le Client si celui-ci ne lui en paye pas le prix en totalité dans les conditions ci-dessus indiquées.
                 </div>
-                <div>A alias animi aspernatur, cum delectus earum eius fuga id illum impedit iure iusto labore
-                    laboriosam magnam molestiae molestias non quae quam quibusdam quis quisquam reiciendis rerum saepe
-                    sunt ut.
+<h2>ARTICLE 5 - Fourniture des Prestations</h2>
+
+<div>Les Services commandés par le Client seront fournis selon les modalités suivantes :
+                Les accès aux services de création et publication permettant de promouvoir l'entreprise de l'utilisateur ou client, seront fournis à l'entreprise dans un délais de 7 jours à compter de la souscription et du règlement de la formule choisie par le client. Une assistance à l'installation des outils ( application mobile ou site internet ) sera également proposée..
+                Lesdits Services seront fournis dans un délai maximum de 7 jours à compter de la validation définitive de la commande du Client, dans les conditions prévues aux présentes CGV à l'adresse indiquée par le Client lors de sa commande sur le site www.so-como.fr .
+                Le Prestataire s'engage à faire ses meilleurs efforts pour fournir les Services commandés par le Client, dans le cadre d'une obligation de moyen et dans les délais ci-dessus précisés.
+                
+                Si les Services commandés n'ont pas été fournis dans un délai de 7 jours après la date indicative de fourniture, pour toute autre cause que la force majeure ou le fait du Client, la vente des Services pourra être résolue à la demande écrite du Client dans les conditions prévues aux articles L 216-2, L 216-3 et L241-4 du Code de la consommation. Les sommes versées par le Client lui seront alors restituées au plus tard dans les quatorze jours qui suivent la date de dénonciation du contrat, à l'exclusion de toute indemnisation ou retenue.
+                En cas de demande particulière du Client concernant les conditions de fourniture des Services, dûment acceptées par écrit par le Prestataire, les coûts y étant liés feront l'objet d'une facturation spécifique complémentaire ultérieure.
+                
+                A défaut de réserves ou réclamations expressément émises par le Client lors de la réception des Services, ceux-ci seront réputés conformes à la commande, en quantité et qualité.
+                Le Client disposera d'un délai de 24 heures à compter de la fourniture des Services pour émettre des réclamations par email, courrier, avec tous les justificatifs y afférents, auprès du Prestataire.
+                Aucune réclamation ne pourra être valablement acceptée en cas de non respect de ces formalités et délais par le Client.
+                Le Prestataire remboursera ou rectifiera dans les plus brefs délais et à ses frais les Services dont le défaut de conformité aura été dûment prouvé par le Client.
                 </div>
-                <div>Ad deserunt fugiat molestias nulla pariatur perspiciatis placeat quo rerum similique velit.
-                    Cupiditate distinctio dolore dolorum eligendi esse facilis iure, mollitia omnis pariatur qui tenetur
-                    totam? Eaque earum modi voluptate?
+<h2>ARTICLE 6 - Droit de rétractation</h2>
+
+<div> Selon les modalités de l’article L221-18 du Code de la Consommation «
+                Pour les contrats prévoyant la livraison régulière de biens pendant une période définie, le délai court à compter de la réception du premier bien. »
+                Le droit de rétractation peut être exercé en ligne, à l'aide du formulaire de rétractation ci-joint et également disponible sur le site ou de toute autre déclaration, dénuée d'ambiguïté, exprimant la volonté de se rétracter et notamment par courrier postal adressé au Prestataire aux coordonnées postales ou mail indiquées à l’ARTICLE 1 des présentes CGV.
+                En cas d'exercice du droit de rétractation dans le délai susvisé, seul le prix des Services commandés est remboursé.
+                Le remboursement des sommes effectivement réglées par le Client sera effectué dans un délai de 14 jours à compter de la réception, par le Prestataire, de la notification de la rétractation du Client.
                 </div>
-                <div>Cumque ducimus eos est, eveniet, hic illum iure minima, mollitia nisi quod rerum sint vel! Amet
-                    dolorum ipsam, mollitia quibusdam tenetur ullam veritatis. Adipisci incidunt laudantium quae qui
-                    quis sed.
+<h2>ARTICLE 7 - Responsabilité du Prestataire - Garanties</h2>
+
+<div>Le Prestataire garantit, conformément aux dispositions légales et sans paiement complémentaire, le Client, contre tout défaut de conformité ou vice caché, provenant d'un défaut de conception ou de réalisation des Services commandés dans les conditions et selon les modalités suivantes :
+                Dispositions relatives aux garanties légales
+                Article L217-4 du Code de la consommation
+                « Le vendeur est tenu de livrer un bien conforme au contrat et répond des défauts de conformité existant lors de la délivrance. Il répond également des défauts de conformité résultant de l'emballage, des instructions de montage ou de l'installation lorsque celle-ci a été mise à sa charge par le contrat ou a été réalisée sous sa responsabilité. »
+                Article L217-5 du Code de la consommation
+                « Le bien est conforme au contrat :
+                1° S'il est propre à l'usage habituellement attendu d'un bien semblable et, le cas échéant :
+                - s'il correspond à la description donnée par le vendeur et possède les qualités que celui-ci a présentées à l'acheteur sous forme d'échantillon ou de modèle ;
+                - s'il présente les qualités qu'un acheteur peut légitimement attendre eu égard aux déclarations publiques faites par le vendeur, par le producteur ou par son représentant, notamment dans la publicité ou l'étiquetage ;
+                2° Ou s'il présente les caractéristiques définies d'un commun accord par les parties ou est propre à tout usage spécial recherché par l'acheteur, porté à la connaissance du vendeur et que ce dernier a accepté. »
+                Article L217-12 du Code de la consommation
+                « L'action résultant du défaut de conformité se prescrit par deux ans à compter de la délivrance du bien. »
+                Article L217-16 du Code de la consommation.
+                « Lorsque l'acheteur demande au vendeur, pendant le cours de la garantie commerciale qui lui a été consentie lors de l'acquisition ou de la réparation d'un bien meuble, une remise en état couverte par la garantie, toute période d'immobilisation d'au moins sept jours vient s'ajouter à la durée de la garantie qui restait à courir. Cette période court à compter de la demande d'intervention de l'acheteur ou de la mise à disposition pour réparation du bien en cause, si cette mise à disposition est postérieure à la demande d'intervention. »
+                Afin de faire valoir ses droits, le Client devra informer le Prestataire, par écrit (mail ou courrier), de l'existence des vices ou défauts de conformité.
+                Le Prestataire remboursera ou rectifiera ou fera rectifier (dans la mesure du possible) les services jugés défectueux dans les meilleurs délais et au plus tard dans les 30 jours jours suivant la constatation par le Prestataire du défaut ou du vice. Ce remboursement pourra être fait par virement ou chèque bancaire.
+                La garantie du Prestataire est limitée au remboursement des Services effectivement payés par le Client.
+                Le Prestataire ne pourra être considéré comme responsable ni défaillant pour tout retard ou inexécution consécutif à la survenance d'un cas de force majeure habituellement reconnu par la jurisprudence française.
+                Les Services fournis par l'intermédiaire du site _______________ du Prestataire sont conformes à la réglementation en vigueur en France. La responsabilité du Prestataire ne saurait être engagée en cas de non respect de la législation du pays dans lequel les Services sont fournis, qu'il appartient au Client, qui est seul responsable du choix des Services demandés, de vérifier.
                 </div>
-                <div>Corporis ducimus hic in officia omnis praesentium quaerat tenetur, vero voluptas voluptatem! Culpa
-                    dicta, dolorem doloremque eius eum exercitationem fuga molestias natus necessitatibus nemo neque
-                    omnis quod repellendus, saepe sit!
+<h2>ARTICLE 8 - Données personnelles</h2>
+
+<div>Le Client est informé que la collecte de ses données à caractère personnel est nécessaire à la vente des Services et leur réalisation et délivrance, confiées au Prestataire. Ces données à caractère personnel sont récoltées uniquement pour l’exécution du contrat de prestations de services.
+                
+                <h3>8.1 Collecte des données à caractère personnel</h3>
+                
+                Les données à caractère personnel qui sont collectées sur le site www.so-como.fr sont les suivantes :
+                
+                Ouverture de compte
+                Lors de la création du compte Client / utilisateur :
+                Noms, prénoms, adresse postale, numéro de téléphone et adresse e-mail.
+                
+                Paiement
+                Dans le cadre du paiement des Prestations proposés sur le site www.so-como.fr, celui-ci enregistre des données financières relatives au compte bancaire ou à la carte de crédit du Client / utilisateur.
+                
+                <h3>8.2 Destinataires des données à caractère personnel</h3>
+                
+                Les données à caractère personnel sont réservées à l’usage unique du Prestataire et de ses salariés.
+                Le responsable de traitement des données est le Prestataire, au sens de la loi Informatique et libertés et à compter du 25 mai 2018 du Règlement 2016/679 sur la protection des données à caractère personnel.
+                
+                <h3>8.4 limitation du traitement</h3>
+                
+                Sauf si le Client exprime son accord exprès, ses données à caractère personnelles ne sont pas utilisées à des fins publicitaires ou marketing.
+                
+                <h3>8.5 Durée de conservation des données</h3>
+                
+                Le Prestataire conservera les données ainsi recueillies pendant un délai de 5 ans, couvrant le temps de la prescription de la responsabilité civile contractuelle applicable.
+                
+                <h3>8.6 Sécurité et confidentialité</h3>
+                
+                Le Prestataire met en œuvre des mesures organisationnelles, techniques, logicielles et physiques en matière de sécurité du numérique pour protéger les données personnelles contre les altérations, destructions et accès non autorisés. Toutefois il est à signaler qu’Internet n’est pas un environnement complètement sécurisé et le Prestataire ne peut garantir la sécurité de la transmission ou du stockage des informations sur Internet.
+                
+                <h3>8.7 Mise en œuvre des droits des Clients et utilisateurs</h3>
+                
+                En application de la règlementation applicable aux données à caractère personnel, les Clients et utilisateurs du site www.so-como.fr disposent des droits suivants :
+                Ils peuvent mettre à jour ou supprimer les données qui les concernent de la manière suivante :
+                En effectuant une simple demande par email ou courrier auprès de l'entreprise So-Como..
+                Ils peuvent supprimer leur compte en écrivant à l’adresse électronique indiqué à l’article 9.3 « Responsable de traitement »
+                Ils peuvent exercer leur droit d’accès pour connaître les données personnelles les concernant en écrivant à l’adresse indiqué à l’article 9.3 « Responsable de traitement »
+                Si les données à caractère personnel détenues par le Prestataire sont inexactes, ils peuvent demander la mise à jour des informations des informations en écrivant à l’adresse indiqué à l’article 9.3 « Responsable de traitement »
+                Ils peuvent demander la suppression de leurs données à caractère personnel, conformément aux lois applicables en matière de protection des données en écrivant à l’adresse indiqué à l’article 9.3 « Responsable de traitement »
+                Ils peuvent également solliciter la portabilité des données détenues par le Prestataire vers un autre prestataire
+                Enfin, ils peuvent s’opposer au traitement de leurs données par le Prestataire
+                Ces droits, dès lors qu’ils ne s’opposent pas à la finalité du traitement, peuvent être exercé en adressant une demande par courrier ou par E-mail au Responsable de traitement dont les coordonnées sont indiquées ci-dessus.
+                Le responsable de traitement doit apporter une réponse dans un délai maximum d’un mois.
+                En cas de refus de faire droit à la demande du Client, celui-ci doit être motivé.
+                Le Client est informé qu’en cas de refus, il peut introduire une réclamation auprès de la CNIL (3 place de Fontenoy, 75007 PARIS) ou saisir une autorité judiciaire.
+                Le Client peut être invité à cocher une case au titre de laquelle il accepte de recevoir des mails à caractère informatifs et publicitaires de la part du Prestataire. Il aura toujours la possibilité de retirer son accord à tout moment en contactant le Prestataire (coordonnées ci-dessus) ou en suivant le lien de désabonnement.
                 </div>
-                <div>Adipisci aut consequuntur cumque cupiditate ducimus eaque enim inventore, itaque laudantium libero
-                    minus omnis, repudiandae sapiente sint sunt unde vitae voluptatibus. Accusamus alias atque dicta
-                    dolorum molestias perspiciatis quas totam?
+<h2>ARTICLE 9 - Propriété intellectuelle</h2>
+
+<div>Le contenu du site www.so-como.fr est la propriété du Vendeur et de ses partenaires et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle.
+                Toute reproduction totale ou partielle de ce contenu est strictement interdite et est susceptible de constituer un délit de contrefaçon.
                 </div>
-                <div>Adipisci eligendi eveniet ipsam itaque, minus nihil nisi numquam perferendis quaerat quam quo totam
-                    veritatis. Accusantium eos exercitationem iusto tempora. Aperiam blanditiis facilis incidunt iusto
-                    magnam, modi nostrum quas sunt.
-                </div>
-                <div>Deserunt neque possimus repellat saepe voluptatibus! Aliquid aperiam autem consectetur harum
-                    nesciunt recusandae, temporibus vel velit. Aut deleniti dicta doloribus eaque ex fugiat modi, nam
-                    omnis qui, rerum, sint voluptatibus!
-                </div>
-                <div>Autem beatae commodi distinctio eligendi facere fugiat illo inventore, nobis placeat porro. Aliquid
-                    cum dignissimos, eum illo iste nam nemo nisi officia sequi vero. Eius harum minima quod sint sit!
-                </div>
-                <div>Ab asperiores beatae corporis delectus dolore dolorum ducimus eius impedit ipsum iure iusto labore
-                    laboriosam magni molestiae molestias nostrum perspiciatis porro praesentium quasi, qui, repudiandae
-                    sint sit tempore totam veritatis?
-                </div>
-                <div>Accusantium beatae labore modi nam quia! A adipisci aspernatur beatae consequatur dolore illum iure
-                    laudantium magni, nostrum, officiis omnis optio perspiciatis quaerat quas quasi, quia quis quisquam
-                    reprehenderit vitae voluptatum!
-                </div>
-                <div>Accusantium architecto asperiores, at consequatur debitis dolor dolore dolores doloribus eaque
-                    exercitationem fuga hic labore laboriosam mollitia necessitatibus nemo nisi nulla qui quibusdam quo
-                    recusandae tenetur veritatis vero voluptate voluptatem.
-                </div>
-                <div>Ab amet aspernatur at consequuntur deserunt dicta ducimus ea enim eum facere impedit incidunt ipsa
-                    ipsum minima mollitia obcaecati officia placeat praesentium, quia reiciendis rem saepe sapiente,
-                    ullam voluptatem voluptatum.
-                </div>
-                <div>Accusantium blanditiis, consequuntur cupiditate dicta modi sunt voluptates. Atque aut cupiditate
-                    dicta doloremque eos, facere libero molestias natus nemo nostrum quis, ratione repellendus sit ut,
-                    velit veritatis voluptates. Molestiae, officiis.
-                </div>
-                <div>Accusantium amet aut consectetur, culpa, deleniti eligendi mollitia, praesentium saepe sed sint
-                    veniam voluptate? Assumenda delectus dolor esse hic ipsam iusto laboriosam maxime, odio odit quasi
-                    ratione temporibus voluptatibus voluptatum.
-                </div>
-                <div>Adipisci aliquid beatae commodi dolores, eos eveniet facilis, fugiat id minus natus quod recusandae
-                    ullam voluptates! Accusamus at eos expedita laboriosam nam quisquam quos temporibus tenetur
-                    voluptates. Dicta, nam, totam.
-                </div>
-                <div>A, accusamus accusantium amet corporis dolor ea eaque fugit magni mollitia possimus quibusdam sunt
-                    tempora temporibus voluptatibus voluptatum? Cupiditate delectus dolores in ipsam nisi odit placeat
-                    praesentium qui quisquam reiciendis?
-                </div>
-                <div>Adipisci deleniti dignissimos ducimus ea eos error eum ipsa itaque laborum, magnam magni, molestiae
-                    natus nemo officiis optio quis voluptas. Aut delectus, explicabo iste molestiae nihil nostrum qui
-                    unde? Reprehenderit.
-                </div>
-                <div>Aliquid asperiores consequatur cum deserunt doloribus enim eum fuga illum itaque iure maiores
-                    molestias neque odio officia, pariatur perferendis placeat rem rerum vel, vero! Autem dolor illum
-                    ipsa necessitatibus provident?
-                </div>
-                <div>Dolore dolorem eius quibusdam similique voluptatem. Accusamus atque aut blanditiis, consequuntur
-                    cum cumque dolor dolore eaque eius fuga illum ipsam labore necessitatibus placeat quae ratione rerum
-                    tempora ut voluptas voluptates?
-                </div>
-                <div>Accusamus amet dolores eligendi esse est eveniet impedit libero obcaecati quo, quos, ratione
-                    recusandae reiciendis similique vel veniam! Accusamus aliquam debitis, et fuga fugiat harum quaerat
-                    recusandae repudiandae sed velit?
-                </div>
-                <div>Accusamus animi aperiam beatae ea, error esse est excepturi explicabo ipsa iusto laudantium maiores
-                    minus nam nemo nesciunt, omnis, pariatur quae quaerat quos recusandae repudiandae sed sequi suscipit
-                    tempora voluptatum?
-                </div>
-                <div>A, ab accusamus ad alias aliquid asperiores autem dicta doloremque ea eaque, earum, eius eum id
-                    impedit ipsa ipsum iusto laboriosam neque nesciunt nihil omnis perferendis quibusdam quo quos
-                    recusandae.
-                </div>
-                <div>Ad alias beatae consectetur consequuntur corporis dolores est excepturi fuga impedit ipsa iste,
-                    iure laboriosam laborum necessitatibus nobis, officia officiis quo ratione repellat suscipit tempora
-                    unde voluptate. Assumenda, facilis incidunt!
-                </div>
-                <div>Adipisci aliquam culpa eligendi enim est exercitationem, expedita in itaque laborum nihil
-                    praesentium, quae quam reprehenderit, tenetur voluptates! Distinctio dolorem enim excepturi ipsum
-                    nulla perferendis placeat, quaerat rerum saepe tempora?
-                </div>
-                <div>Accusantium, maxime sequi? At, beatae dolores enim facere magnam quod saepe temporibus. Delectus,
-                    explicabo, odit. Ab, atque blanditiis debitis ducimus eligendi eos illo, laudantium, quaerat quo
-                    quos tempore ut veniam.
-                </div>
-                <div>Accusamus blanditiis corporis dolorem earum eos error et eveniet excepturi ipsa ipsam ipsum laborum
-                    maiores mollitia neque nulla officiis perferendis quam quas ratione recusandae, sint sunt suscipit
-                    voluptates? Provident, saepe?
-                </div>
-                <div>Accusamus distinctio, laboriosam minima natus necessitatibus possimus suscipit. Ad alias architecto
-                    assumenda aut autem corporis culpa doloribus eum facilis fugiat in ipsam, ipsum molestiae qui
-                    repudiandae tenetur ut velit voluptas!
-                </div>
-                <div>Ab adipisci aliquam atque aut autem culpa delectus dolores eligendi itaque iusto laborum, natus
-                    nemo non officiis placeat quos ullam. Accusantium aspernatur autem doloremque impedit magni natus
-                    optio perferendis quia.
-                </div>
-                <div>Aliquid aut autem, corporis cumque dolorem dolores ea earum error facere fugiat impedit in magni
-                    minima nemo nisi non nostrum numquam possimus quae repellat repudiandae sapiente vero. Ex itaque,
-                    sed!
-                </div>
-                <div>Asperiores blanditiis dignissimos fugiat harum nulla, porro quam reiciendis sapiente totam. Ab
-                    accusamus asperiores, blanditiis cupiditate dicta ea eveniet excepturi fugiat ipsam iste labore
-                    officia quibusdam quo sequi, tempora veniam?
-                </div>
-                <div>Animi assumenda beatae commodi consequatur cupiditate error est eum excepturi ipsa ipsam labore
-                    laborum molestiae nobis non nulla odit officiis optio possimus quas quod quos repudiandae sint
-                    soluta, sunt, tempore.
-                </div>
-                <div>A ab assumenda cum, dicta eius, eveniet facere harum itaque pariatur quibusdam quo ratione
-                    repellendus saepe, ullam voluptate. Asperiores deleniti fugit impedit minus neque numquam obcaecati
-                    officiis perferendis repellat voluptate!
-                </div>
-                <div>Doloribus recusandae rem repellendus tempora? Aliquam amet aspernatur autem corporis dolor, dolore
-                    eveniet hic ipsam modi natus nobis perferendis quam, quas qui quis quisquam reprehenderit, suscipit
-                    tempore ullam voluptatibus! Accusamus?
-                </div>
-                <div>Ad commodi debitis itaque iure labore, quas quibusdam sequi sit veritatis vitae? Deserunt, eligendi
-                    eos facilis id ipsa laborum laudantium molestiae perspiciatis provident quasi repellendus soluta
-                    suscipit vel veritatis, vitae?
-                </div>
-                <div>Accusantium alias architecto asperiores, at blanditiis cum cupiditate doloribus illo incidunt
-                    laudantium maiores nisi non numquam optio possimus praesentium qui quidem rerum sapiente soluta
-                    suscipit tempora tenetur totam velit vero!
-                </div>
-                <div>Assumenda aut delectus, deleniti dolorum eos eum ipsa ipsam nemo omnis quaerat quidem rem
-                    repellendus sed similique tempore unde vero voluptatem. Aliquid consequatur laudantium non
-                    reprehenderit sint, sunt tempore voluptates!
-                </div>
-                <div>Aspernatur assumenda beatae dolorem ducimus in nisi rem tempore temporibus totam? Debitis
-                    laudantium libero sed temporibus ullam. Autem vitae, voluptatem! Ab atque iste nemo officiis optio
-                    quas similique temporibus unde!
-                </div>
-                <div>Alias, labore, laudantium? Blanditiis corporis impedit ipsam ipsum mollitia non repellat
-                    repellendus ut veniam! Ab accusamus adipisci architecto, ducimus in ipsa itaque maxime, molestias
-                    quidem quisquam quos rem, tempora vero.
-                </div>
-                <div>Facere, sequi, voluptates. Aperiam culpa debitis dignissimos, dolore eius enim et excepturi id in
-                    inventore itaque optio quae quaerat quis tempore! Alias iusto necessitatibus nulla! Ab deserunt esse
-                    eveniet natus.
-                </div>
-                <div>Aperiam deleniti expedita itaque nulla perspiciatis sed ut velit. Ad aliquam aspernatur commodi
-                    consectetur consequatur dolor dolore expedita hic incidunt ipsum nesciunt nostrum odio, omnis porro
-                    quis rem saepe suscipit!
-                </div>
-                <div>Architecto culpa incidunt, laborum maiores nisi possimus totam. Aperiam delectus deleniti inventore
-                    magnam vel. Animi aperiam dolorum ducimus eum hic impedit, laudantium natus optio qui ratione sequi
-                    similique sunt veritatis!
-                </div>
-                <div>Adipisci, aliquam commodi consequatur culpa deleniti doloribus expedita fugit illum in iure
-                    molestiae nemo, numquam qui quo recusandae reiciendis reprehenderit saepe sequi, similique
-                    voluptate? Iste mollitia nesciunt omnis quidem veritatis?
-                </div>
-                <div>Adipisci beatae consectetur dolorum eius expedita facere labore minima molestias necessitatibus
-                    nihil officia quas qui quia quos rem, sed, veniam voluptas voluptate? Asperiores atque cum fugit
-                    nemo obcaecati repudiandae vero.
-                </div>
-                <div>Assumenda beatae eaque esse expedita officia quibusdam quis reiciendis reprehenderit rerum tempora!
-                    Dignissimos ex facere fugiat incidunt, ipsam iste iusto nobis nostrum odit perferendis rem repellat
-                    saepe unde velit voluptas.
-                </div>
-                <div>Aliquid cum debitis, fuga itaque laborum nihil obcaecati odit qui sequi unde veniam, voluptate
-                    voluptatibus. Atque aut deserunt fugiat itaque magnam minus mollitia nesciunt. Alias cumque nisi
-                    odit temporibus tenetur!
-                </div>
-                <div>Ab architecto dignissimos modi voluptates voluptatum? Asperiores dolorum esse in incidunt inventore
-                    modi, non, quam quidem reprehenderit rerum velit vero voluptates. Ducimus esse exercitationem rem
-                    unde veritatis! Dignissimos, minima, voluptatum.
-                </div>
+                <h2> ARTICLE 10 - Droit applicable - Langue</h2>
+                
+                <div>Les présentes CGV et les opérations qui en découlent sont régies et soumises au droit français.
+                Les présentes CGV sont rédigées en langue française. Dans le cas où elles seraient traduites en une ou plusieurs langues étrangères, seul le texte français ferait foi en cas de litige.  
+            </div>
             </div>
         </Layout>
     )

@@ -10,6 +10,7 @@ const Layout = ({ title, classe, children }) => {
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
+        setIsMobile(width <= 768 ? true : false);
     }
 
 
@@ -21,7 +22,7 @@ const Layout = ({ title, classe, children }) => {
 
         }
         // eslint-disable-next-line
-    }, []);
+    });
 
     return (
         <div className={classe}>

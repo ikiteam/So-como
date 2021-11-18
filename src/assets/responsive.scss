@@ -15,6 +15,17 @@
             }
         }
     }
+    .contact{
+      
+        .contactContainer{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+            
+        }
+        
+
+    }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -138,6 +149,7 @@
                 }
             }
     }
+  
 }
  }
 

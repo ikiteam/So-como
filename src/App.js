@@ -14,16 +14,16 @@ function App() {
             <Router>
                 <Switch>
                     <Route exact path="/">
-                        <Home/>
+                        <Home />
                     </Route>
                     <Route path="/mention-legal">
-                        <LegalMention/>
+                        <LegalMention />
                     </Route>
                     <Route path="/condition-general-vente">
-                        <ConditionGeneral/>
+                        <ConditionGeneral />
                     </Route>
                     <Route path="/politique-de-confidentialité">
-                        <PolitiqueConfidentiality/>
+                        <PolitiqueConfidentiality />
                     </Route>
                 </Switch>
             </Router>
