@@ -76,7 +76,6 @@ const ContactForm = () => {
             <div>
                 <ReCAPTCHA
                     sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
-                    onChange={formik.handleChange}
                 />
                 <button type="submit" disabled={formik.isSubmitting} id="btnSend" className="btn submit">Envoyer</button>
             </div>
