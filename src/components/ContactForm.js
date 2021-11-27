@@ -12,6 +12,13 @@ import ReCAPTCHA from "react-google-recaptcha";
 const ContactForm = () => {
     const errorsMessage = "ce champ est requis";
     const form = useRef();
+    const recaptcha = function onChange(values) {
+        if(values !== "")
+            document.getElementById('btnSend').disabled = false;
+        else
+            document.getElementById('btnSend').disabled = true;
+    }
+
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -29,21 +36,23 @@ const ContactForm = () => {
             message: Yup.string()
                 .min(10, "Vous devez saisir 10 caractères minimun.")
                 .required(errorsMessage),
-            recaptcha: Yup.string()
-                .required(),
+
 
         }),
         onSubmit: values => {
             console.log(values);
 
-            emailjs.sendForm('service_krkylsr', 'template_up4361d', form.current, 'user_lQfT3X6zkLYWzW5Fe6GTv')
-                .then((result) => {
-                    console.log(result.text);
-                    alert('message envoyée')
-                }, (error) => {
-                    console.log(error.text);
-                    alert('une erreur est survenue')
-                });
+            if (recaptcha(values)) {
+                emailjs.sendForm('service_krkylsr', 'template_up4361d', form.current, 'user_lQfT3X6zkLYWzW5Fe6GTv')
+                    .then((result) => {
+                        console.log(result.text);
+                        alert('message envoyée')
+                    }, (error) => {
+                        console.log(error.text);
+                        alert('une erreur est survenue')
+                    });
+            }
+
         },
 
 
@@ -76,6 +85,7 @@ const ContactForm = () => {
             <div>
                 <ReCAPTCHA
                     sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
+                    onChange={recaptcha}
                 />
                 <button type="submit" disabled={formik.isSubmitting} id="btnSend" className="btn submit">Envoyer</button>
             </div>
