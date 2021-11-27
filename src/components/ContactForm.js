@@ -12,6 +12,12 @@ import ReCAPTCHA from "react-google-recaptcha";
 const ContactForm = () => {
     const errorsMessage = "ce champ est requis";
     const form = useRef();
+    const recaptcha = function onChange(value) {
+        if(value !== "")
+            document.getElementById('btnEnvoyer').disabled = false;
+        else
+            document.getElementById('btnEnvoyer').disabled = true;
+    }
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -47,6 +53,7 @@ const ContactForm = () => {
                 });
         },
 
+
     });
     return (
         <form action="#" method="post" ref={form} onSubmit={formik.handleSubmit} className="form">
@@ -76,6 +83,7 @@ const ContactForm = () => {
             <div>
                 <ReCAPTCHA
                     sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
+                    onChange={recaptcha}
                 />
                 <button type="submit" disabled={formik.isSubmitting} id="btnSend" className="btn submit">Envoyer</button>
             </div>
