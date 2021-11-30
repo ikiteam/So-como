@@ -31,7 +31,7 @@ const ContactForm = () => {
                         message: Yup.string()
                             .min(10, "Vous devez saisir 10 caractères minimun.")
                             .required(errorsMessage),
-                        recaptcha: Yup.string()
+                        recaptcha: Yup.bool()
                             .required(errorsMessage)
                     }),
                     onSubmit: values => {
@@ -85,7 +85,7 @@ const ContactForm = () => {
                         sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
                     />
                     {formik.touched.recaptcha && formik.errors.recaptcha ? (
-                    <span className="errorsMessage">{formik.errors.recaptcha}</span>) : null}
+                        <span className="errorsMessage">{formik.errors.recaptcha}</span>) : null}
                     <button type="submit" disabled={formik.isSubmitting} id="btnSend" className="btn submit">Envoyer
                     </button>
                 </div>
