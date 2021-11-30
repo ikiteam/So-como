@@ -32,7 +32,7 @@ const ContactForm = () => {
                             .min(10, "Vous devez saisir 10 caractères minimun.")
                             .required(errorsMessage),
                         recaptcha: Yup.string()
-                            .required()
+                            .required(errorsMessage)
                     }),
                     onSubmit: values => {
                         console.log(values);
@@ -77,7 +77,7 @@ const ContactForm = () => {
                     {formik.touched.message && formik.errors.message ? (
                         <span className="errorsMessage">{formik.errors.message}</span>) : null}
                     <textarea name="message" id="message" placeholder="Entrez votre message" cols="30" rows="10"
-                              {...formik.getFieldProps('recaptcha')} />
+                              {...formik.getFieldProps('message')} />
 
                 </div>
                 <div>
