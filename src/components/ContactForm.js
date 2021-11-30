@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import emailjs from 'emailjs-com';
 import ReCAPTCHA from "react-google-recaptcha";
+import {render} from "react-dom";
 
 
 /*------------------------------------------------------------------------------*/
