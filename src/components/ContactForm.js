@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {createRef, useRef} from 'react';
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
 import emailjs from 'emailjs-com';
@@ -13,6 +13,7 @@ import {render} from "react-dom";
 const ContactForm = () => {
         const errorsMessage = "ce champ est requis";
         const form = useRef();
+        const recaptcha = createRef();
         const formik = useFormik({
                     initialValues: {
                         email: '',
@@ -31,13 +32,14 @@ const ContactForm = () => {
                         message: Yup.string()
                             .min(10, "Vous devez saisir 10 caractères minimun.")
                             .required(errorsMessage),
-                        recaptcha: Yup.bool()
+                        recaptcha: Yup.string()
                             .required(errorsMessage)
                     }),
                     onSubmit: values => {
                         console.log(values);
 
-                        if (values !== "")
+                        if (values !== "" )
+                            console.log(recaptcha)
                             emailjs.sendForm('service_krkylsr', 'template_up4361d', form.current, 'user_lQfT3X6zkLYWzW5Fe6GTv')
                                 .then((result) => {
                                     console.log(result.text);
@@ -83,6 +85,8 @@ const ContactForm = () => {
                 <div>
                     <ReCAPTCHA
                         sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
+                        ref={recaptcha}
+                        verifyCallback={(response) => { setFieldValue("recaptcha", response); }}
                     />
                     {formik.touched.recaptcha && formik.errors.recaptcha ? (
                         <span className="errorsMessage">{formik.errors.recaptcha}</span>) : null}
