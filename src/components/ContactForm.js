@@ -86,7 +86,6 @@ const ContactForm = () => {
                     <ReCAPTCHA
                         sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
                         ref={recaptcha}
-                        verifyCallback={(response) => { setFieldValue("recaptcha", response); }}
                     />
                     {formik.touched.recaptcha && formik.errors.recaptcha ? (
                         <span className="errorsMessage">{formik.errors.recaptcha}</span>) : null}
