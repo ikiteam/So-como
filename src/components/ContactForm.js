@@ -38,8 +38,8 @@ const ContactForm = () => {
                     onSubmit: values => {
                         console.log(values);
 
-                        if (values !== "" )
-                            console.log(recaptcha)
+                        if (values !== "" ) {
+                        console.log(recaptcha)
                             emailjs.sendForm('service_krkylsr', 'template_up4361d', form.current, 'user_lQfT3X6zkLYWzW5Fe6GTv')
                                 .then((result) => {
                                     console.log(result.text);
@@ -48,9 +48,9 @@ const ContactForm = () => {
                                     console.log(error.text);
                                     alert('une erreur est survenue')
                                 });
-                        else
+                        } else {
                             document.getElementById('btnSend').disabled = true;
-
+                        }
                     },
 
                 }
