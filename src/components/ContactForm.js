@@ -54,36 +54,45 @@ const ContactForm = () => {
             }
             }
         >
-            render={({
+            {({
                          values, errors, touched,
                          handleSubmit, setFieldValue
                      }) => (
             <Form className="form" ref={form} onSubmit={handleSubmit}>
                 <div>
-                    <Field name="email">Mail</Field>
+                    <label htmlFor="email">email</label>
+                    <Field name="email" placeholder="e-mail" />
                     {errors.email && touched.email ? (
-                        <div>{errors.email}</div>
+                        <div className="errorsMessage">{errors.email}</div>
                     ) : null}
                 </div>
 
                 <div>
-                    <Field name="object">Objet</Field>
+                    <label htmlFor="object">objet</label>
+                    <Field name="object"  placeholder="objet" />
                     {errors.object && touched.object ? (
-                        <div>{errors.object}</div>
+                        <div className="errorsMessage">{errors.object}</div>
                     ) : null}
                 </div>
 
                 <div>
-                    <Field name="message" as="textarea">Message</Field>
+                    <label htmlFor="message">message</label>
+                    <Field name="message" as="textarea" />
                     {errors.message && touched.message ? (
-                        <div>{errors.message}</div>
+                        <div className="errorsMessage">{errors.message}</div>
                     ) : null}
                 </div>
                 <div>
                     <Recaptcha
                         sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
-
+                        render="explicit"
+                        theme="dark"
+                        verifyCallback={(response) => { setFieldValue("Recaptcha", response); }}
                     />
+                    {errors.recaptcha
+                    && touched.recaptcha && (
+                        <div className="errorsMessage">{errors.recaptcha}</div>
+                    )}
                     <button type="submit" id="btnSend" className="btn submit">Envoyer</button>
                 </div>
             </Form>
