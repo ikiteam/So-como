@@ -23,8 +23,7 @@ const ContactForm = () => {
         message: Yup.string()
             .min(10, "Vous devez saisir 10 caractères minimun.")
             .required(errorsMessage),
-        recaptcha: Yup.string()
-            .required(errorsMessage),
+
     });
     return (
         <Formik
@@ -32,7 +31,6 @@ const ContactForm = () => {
                 email: "",
                 object: "",
                 message: "",
-                recaptcha: "",
             }}
             validationSchema={validation}
             onSubmit={ values => {
@@ -86,7 +84,6 @@ const ContactForm = () => {
                     <Recaptcha
                         sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
                         render="explicit"
-                        theme="dark"
                         verifyCallback={(response) => { setFieldValue("Recaptcha", response); }}
                     />
                     {errors.recaptcha
