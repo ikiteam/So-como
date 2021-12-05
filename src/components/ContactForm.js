@@ -13,6 +13,15 @@ const ContactForm = () => {
     const errorsMessage = "ce champ est requis";
     const form = useRef();
 
+    let recaptchaInstance;
+    const executeCaptcha = function () {
+        recaptchaInstance.execute();
+    };
+    const verifyCallback = function (response) {
+        console.log(response);
+        document.getElementById("form").submit();
+    };
+
     const validation = Yup.object().shape({
         email: Yup.string()
             .email('l\'email est invalide.')
@@ -58,7 +67,7 @@ const ContactForm = () => {
                   values, errors, touched,
                   handleSubmit, setFieldValue
               }) => (
-                <Form className="form" ref={form} onSubmit={handleSubmit}>
+                <Form className="form" id="form" ref={form} onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="email">email</label>
                         <Field name="email" placeholder="e-mail"/>
@@ -86,28 +95,20 @@ const ContactForm = () => {
                         <Recaptcha
                             sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
                             render="explicit"
-                            verifyCallback={(response) => {
-                                setFieldValue("Recaptcha", response);
-                            }}
-                            validationOnChange={values => {
-                                if (values !== "") {
-                                document.getElementById("btnSend").disabled = false;
-                            } else {
-                                document.getElementById("btnSend").disabled = true;
-                            }
-                            }
-                            }
-                                />
-                            {errors.recaptcha
-                                && touched.recaptcha && (
-                                <div className="errorsMessage">{errors.recaptcha}</div>
-                                )}
-                                <button type="submit" id="btnSend" className="btn submit">Envoyer</button>
-                                </div>
-                                </Form>
-                                )}
-                    </Formik>
-                    );
-                    };
+                            ref={e => recaptchaInstance = e}
+                            verifyCallback={verifyCallback}
+                        />
+                        {errors.recaptcha
+                        && touched.recaptcha && (
+                            <div className="errorsMessage">{errors.recaptcha}</div>
+                        )}
+                        <button type="submit" id="btnSend" className="btn submit" onClick={executeCaptcha}
+                        >Envoyer</button>
+                    </div>
+                </Form>
+            )}
+        </Formik>
+    );
+};
 
-                    export default ContactForm;
+export default ContactForm;
