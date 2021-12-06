@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import * as Yup from 'yup';
 import {Formik, Form, Field} from 'formik';
 import emailjs from 'emailjs-com';
-import Recaptcha from "react-google-recaptcha";
+import Recaptcha from 'react-google-invisible-recaptcha';
 
 
 /*------------------------------------------------------------------------------*/
@@ -12,15 +12,7 @@ import Recaptcha from "react-google-recaptcha";
 const ContactForm = () => {
     const errorsMessage = "ce champ est requis";
     const form = useRef();
-
-    let recaptchaInstance;
-    const executeCaptcha = function () {
-        recaptchaInstance.execute();
-    };
-    const verifyCallback = function (response) {
-        console.log(response);
-        document.getElementById("form").submit();
-    };
+    const refCaptcha = React.useRef(null)
 
     const validation = Yup.object().shape({
         email: Yup.string()
@@ -93,16 +85,10 @@ const ContactForm = () => {
                     </div>
                     <div>
                         <Recaptcha
-                            sitekey="6LeyHDAdAAAAAAd_-TqmfDNu6CsPNXQ_u9mb-2rL"
-                            render="explicit"
-                            ref={e => recaptchaInstance = e}
-                            verifyCallback={verifyCallback}
-                        />
-                        {errors.recaptcha
-                        && touched.recaptcha && (
-                            <div className="errorsMessage">{errors.recaptcha}</div>
-                        )}
-                        <button type="submit" id="btnSend" className="btn submit" onClick={executeCaptcha}
+                            ref={refCaptcha}
+                            sitekey={ "6LdvF34dAAAAAHUarY_Mce8EYcYjut1sD6hewxf2" }
+                                onResolved={ () => console.log( 'Human detected.' ) } />
+                        <button type="submit" id="btnSend" className="btn submit"
                         >Envoyer</button>
                     </div>
                 </Form>
