@@ -182,8 +182,6 @@ header{
         align-items: center;
         justify-content: center;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         transition: all 250ms 750ms ease-in-out;
         z-index: 1000;
             div{
@@ -490,7 +488,7 @@ header{
                     height: 100%;
                     width: 100%;
                     content: "";
-                    top:0px;
+                    top:0;
                     position: absolute;
                     background: $blanc;
                     left:0;
@@ -536,15 +534,13 @@ header{
 
 footer{
     width: 100%;
-    margin:auto;
-    margin: 80px auto; 
+    margin: 80px auto;
     padding:0 10%;
 
         .logo{
             text-align: center;
-            margin-bottom: 80px;
             width: 200px;
-            margin: auto;
+            margin: auto auto 80px auto;
             #Socomo_logo{
                 fill:$blanc;
                 width: 50%;
