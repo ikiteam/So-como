@@ -116,7 +116,6 @@ const ConditionGeneral = () => {
                 Le Prestataire remboursera ou rectifiera ou fera rectifier (dans la mesure du possible) les services jugés défectueux dans les meilleurs délais et au plus tard dans les 30 jours jours suivant la constatation par le Prestataire du défaut ou du vice. Ce remboursement pourra être fait par virement ou chèque bancaire.
                 La garantie du Prestataire est limitée au remboursement des Services effectivement payés par le Client.
                 Le Prestataire ne pourra être considéré comme responsable ni défaillant pour tout retard ou inexécution consécutif à la survenance d'un cas de force majeure habituellement reconnu par la jurisprudence française.
-                Les Services fournis par l'intermédiaire du site _______________ du Prestataire sont conformes à la réglementation en vigueur en France. La responsabilité du Prestataire ne saurait être engagée en cas de non respect de la législation du pays dans lequel les Services sont fournis, qu'il appartient au Client, qui est seul responsable du choix des Services demandés, de vérifier.
                 </div>
 <h2>ARTICLE 8 - Données personnelles</h2>
 
